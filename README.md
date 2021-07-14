@@ -18,7 +18,7 @@ This application provides HR with custom functionality to calculate seniority da
 
 ### Solution Diagram
 
-![solution diagram](./images/solution_diagram.png)
+![solution diagram](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/mission/images/solution_diagram.png) 
 
 The Calculate Employee Seniority extension is developed using the SAP Cloud Application programming Model (CAP) and runs on the SAP BTP, Cloud Foundry runtime. It consumes platform services like SAP Event Mesh, SAP HANA Cloud and the Destination service. The events occuring in SAP SuccessFactors are inserted into the SAP Event Mesh queue. The application running in Cloud Foundry is notified on events, consumes them from the queue and inserts the event data into the HANA Cloud database, applies rules for seniority calculation and finally updates those results to custom fields on SAP SuccessFactors.
 
@@ -49,7 +49,7 @@ Subscriptions required in your SAP Business Technology Platform Account:
 
 ## Setup & Configuration
 
-### Step 1: [Setup SAP Business Technology Platform](./01-SetupSAPBusinessTechnologyPlatform)
+### Step 1: [Setup SAP Business Technology Platform](./mission/01-SetupSAPBusinessTechnologyPlatform)
 ### Step 2: [Setup SAP BTP and SAP SuccessFactors connectivity and extensibility](./02-SetupSAPBTPAndSAPSuccessFactorsConnectivityAndExtensibility)
 ### Step 3: [Configure SAP Business Application Studio](./03-ConfigureSAPBusinessApplicationStudio)
 ### Step 4: [Clone the GitHub repository and adapt the configuration to your environment](./04-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
