@@ -1,10 +1,8 @@
 # Clone the Repository and adapt the configuration to your enviroment
 
-## **TODO: change github.tools to particular github instance**
-
 In this how to guide, you will clone an existing CAP application to your SAP Business Application Studio dev space, deploy and test your application.
 
-1. Go to <https://github.tools.sap/btp-use-case-factory/successfactors-seniority-calculator> and fork the repository so that you have the source code and can further on work and change the code. (For instance, in one of the subsequent steps you can customize the business rules to your own requirements)
+1. Go to <https://github.com/SAP-samples/btp-use-case-factory/successfactors-extension-calculate-employee-seniority> and fork the repository so that you have the source code and can further on work and change the code. (For instance, in one of the subsequent steps you can customize the business rules to your own requirements)
 
     ![Fork Repo](./images/fork-repo.png)
 
@@ -15,7 +13,7 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
     <img src="./images/fork-repo-user.png" alt="Choose user for fork" width="250">
 
 
-    You should now have the following repository: https://github.tools.sap/**YourUser**/successfactors-seniority-calculator. 
+    You should now have the following repository: https://github.com/**YourUser**/successfactors-extension-calculate-employee-seniority 
 
 3.	Choose *Terminal -> New Terminal* in the menu on the top of your screen.
 
@@ -30,7 +28,7 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
 5. Clone your forked sample GitHub repository for this mission. 
 
     ```
-    git clone https://github.tools.sap/YourUser/successfactors-seniority-calculator
+    git clone https://github.com/SAP-samples/YourUser/successfactors-extension-calculate-employee-seniority
     ```
 
     > IMPORTANT: Replace **YourUser** with your actual username. 
@@ -39,7 +37,7 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
 
     ![Open Workspace](./images/dev-cap-app-7.png)
  
-7.	Open the project by selecting projects -> successfactors-seniority-calculator and click on *Open*
+7.	Open the project by selecting projects -> successfactors-extension-calculate-employee-seniority and click on *Open*
 
 8. After the project has been cloned and opened successfully, you need to adapt the configuration of the project to your environment. For this, you have to enter the name of the registered SAP SuccessFactors System from the step [Setup SAP BTP and SAP SuccessFactors connectivity and extensibility](../02-SetupSAPBTPAndSAPSuccessFactorsConnectivityAndExtensibility) (in this case *mySF*) into two files:
 
@@ -67,7 +65,7 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
   ...
 ```
 
-9. Change the [payload URI](https://github.tools.sap/btp-use-case-factory/successfactors-seniority-calculator/blob/c0c255c808709644f12b300c7ee3555c98798896/bas/seniority-calc-cds/srv/emp-service.js#L72) in *emp-service.js* . It depends on the SF Instance.
+9. Change the [payload URI](https://github.com/SAP-samples/btp-use-case-factory/successfactors-extension-calculate-employee-seniority/blob/c0c255c808709644f12b300c7ee3555c98798896/bas/seniority-calc-cds/srv/emp-service.js#L72) in *emp-service.js* . It depends on the SF Instance.
 
 
 
@@ -94,7 +92,7 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
     }
 ```
 
-11. Change the [redirect URL](https://github.tools.sap/btp-use-case-factory/successfactors-seniority-calculator/blob/c0c255c808709644f12b300c7ee3555c98798896/bas/seniority-calc-cds/xs-security.json#L9) in *xs-security.json*, based on your BAS URL.
+11. Change the [redirect URL](https://github.com/SAP-samples/btp-use-case-factory/successfactors-extension-calculate-employee-seniority/blob/c0c255c808709644f12b300c7ee3555c98798896/bas/seniority-calc-cds/xs-security.json#L9) in *xs-security.json*, based on your BAS URL.
 
 ```json
 {

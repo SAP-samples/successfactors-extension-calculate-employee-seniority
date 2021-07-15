@@ -30,7 +30,7 @@ In this how to guide, you will deploy the CAP Application with all its bound ser
     This will trigger the deployment to SAP BTP, Cloud Foundry Runtime including the creation of the necessary service instances and service bindings to the corresponding apps.
 
 ## Redeployment
-If you want to redeploy without undeploying the running CAP Application, you need to change a few services in the ```mta.yaml``` from ```managed-service``` to ```existing-service```. For this, adjust the marked lines highlighted [here](https://github.tools.sap/btp-use-case-factory/successfactors-seniority-calculator/blob/main/bas/seniority-calc-cds/mta.yaml#L49-L50) and [here](https://github.tools.sap/btp-use-case-factory/successfactors-seniority-calculator/blob/main/bas/seniority-calc-cds/mta.yaml#L61-L62) that it looks like the following:
+If you want to redeploy without undeploying the running CAP Application, you need to change a few services in the ```mta.yaml``` from ```managed-service``` to ```existing-service```. For this, adjust the marked lines highlighted [here](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/mta.yaml#L49-L50) and [here](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/mta.yaml#L61-L62) that it looks like the following:
 
 ```yaml
   - name: seniority-calc-em

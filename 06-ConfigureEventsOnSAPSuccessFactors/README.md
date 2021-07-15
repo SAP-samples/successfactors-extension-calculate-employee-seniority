@@ -27,8 +27,6 @@ In this step, login to the SAP SuccessFactors instance as an administrator and r
 
  ![Note Event Mesh details](./images/em-5.png)
 
- 
-
  6. Add Custom Header Parameters  > Add New Row with ```Key = x-qos``` and ```Value = 1``` 
  and click **Save** to complete the process.
 
