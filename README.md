@@ -62,9 +62,16 @@ Subscriptions required in your SAP Business Technology Platform Account:
 
 ## Requirements
 
+  * A BTP global account or [trial account](https://www.sap.com/products/business-technology-platform/trial.html)
+  * An SAP SuccessFactors tenant (optional)
+
 ## Download and Installation
 
+Start the mission with Step 1 above
+
 ## Known Issues
+
+No known issues at this time
 
 ## How to obtain support
 
@@ -73,6 +80,8 @@ Subscriptions required in your SAP Business Technology Platform Account:
 For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
 
 ## Contributing
+
+If you would like to contribute, please submit a pull request in the usual fashion.
 
 ## License
 Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
