@@ -56,6 +56,6 @@
 
   ![CDS OData response](./images/results-3.png)
 
-6. You can also add new entries or push an event into the message queue using the relevant Postman requests in the collection. Note that for the event mesh you need to use the properties you retrieved from the service key during the [Configure events on SAP SuccessFactors](../07-ConfigureEventsOnSAPSuccessFactors) section but topic names do not need to be double encoded.
+6. You can also add new entries or push an event into the message queue using the relevant Postman requests in the collection. Note that for the event mesh you need to use the properties you retrieved from the service key during the [Configure events on SAP SuccessFactors](../06-ConfigureEventsOnSAPSuccessFactors) section but topic names do not need to be double encoded.
 
 Now you can proceed with the final steps of the mission!
