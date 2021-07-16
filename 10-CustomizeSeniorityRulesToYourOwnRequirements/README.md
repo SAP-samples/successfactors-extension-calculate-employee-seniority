@@ -36,5 +36,5 @@ employee.seniority = diffInDays
 ```
 
 2. Change the logic to calculate the ```employee.seniority``` to your requirements
-3. [Run CAP Application in SAP Business Application Studio](../10-RunCAPApplicationInSAPBusinessApplicationStudio) and [Test End to End from SAP SuccessFactors to CAP Application](../09-TestEndToEndFromSAPSuccessFactorsToCAPApplication) like in the previous steps
-4. [Redeploy CAP Application to Cloud Foundry and HANA Cloud](../06-DeployCAPApplicationToCloudFoundryAndHANACloud#redeployment) with respect to the hint of redeployment
+3. [Run CAP Application in SAP Business Application Studio](../09-RunCAPApplicationInSAPBusinessApplicationStudio) and [Test End to End from SAP SuccessFactors to CAP Application](../08-TestEndToEndFromSAPSuccessFactorsToCAPApplication) like in the previous steps
+4. [Redeploy CAP Application to Cloud Foundry and HANA Cloud](../05-DeployCAPApplicationToCloudFoundryAndHANACloud#redeployment) with respect to the hint of redeployment
