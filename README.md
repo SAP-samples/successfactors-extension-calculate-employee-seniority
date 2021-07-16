@@ -54,7 +54,7 @@ Subscriptions required in your SAP Business Technology Platform Account:
 ### Step 1: [Setup SAP Business Technology Platform](../mission/01-SetupSAPBusinessTechnologyPlatform)
 ### Step 2: [Setup SAP BTP and SAP SuccessFactors connectivity and extensibility](../mission/02-SetupSAPBTPAndSAPSuccessFactorsConnectivityAndExtensibility)
 ### Step 3: [Configure SAP Business Application Studio](../mission/03-ConfigureSAPBusinessApplicationStudio)
-### Step 4: [Clone the GitHub repository and adapt the configuration to your environment](./mission/04-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
+### Step 4: [Clone the GitHub repository and adapt the configuration to your environment](../mission/04-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
 ### Step 5: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission/05-DeployCAPApplicationToCloudFoundryAndHANACloud)
 ### Step 6: [Configure Events on SAP SuccessFactors](../mission/06-ConfigureEventsOnSAPSuccessFactors)
 ### Step 7: [Configure custom seniority fields in SAP SuccessFactors](../mission/07-ConfigureCustomSeniorityFieldsInSAPSuccessFactors)
