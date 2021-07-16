@@ -65,7 +65,7 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
   ...
 ```
 
-9. Change the [payload URI](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/c0c255c808709644f12b300c7ee3555c98798896/srv/emp-service.js#L72) in *emp-service.js* . It depends on the SF Instance.
+9. Change the [payload URI](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/srv/emp-service.js#L72) in *emp-service.js* . It depends on the SF Instance.
 
 
 
@@ -92,7 +92,7 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
     }
 ```
 
-11. Change the [redirect URL](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/c0c255c808709644f12b300c7ee3555c98798896/xs-security.json#L9) in *xs-security.json*, based on your BAS URL.
+11. Change the [redirect URL](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/xs-security.json#L9) in *xs-security.json*, based on your BAS URL.
 
 ```json
 {
