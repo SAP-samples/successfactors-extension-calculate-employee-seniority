@@ -2,7 +2,7 @@
 
 In this how to guide, you will clone an existing CAP application to your SAP Business Application Studio dev space, deploy and test your application.
 
-1. Go to <https://github.com/SAP-samples/btp-use-case-factory/successfactors-extension-calculate-employee-seniority> and fork the repository so that you have the source code and can further on work and change the code. (For instance, in one of the subsequent steps you can customize the business rules to your own requirements)
+1. Go to <https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority> and fork the repository so that you have the source code and can further on work and change the code. (For instance, in one of the subsequent steps you can customize the business rules to your own requirements)
 
     ![Fork Repo](./images/fork-repo.png)
 
