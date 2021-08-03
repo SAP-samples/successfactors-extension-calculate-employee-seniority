@@ -19,6 +19,8 @@ To connect to a SAP SuccessFactors system we first have to register it on the SA
 
    ![Register SFSF System](./images/sf-1.png)
 
+    * Note that provisioning is only available for SAP employees and partners. Customers should raise an incident against the **LOD-SF-PLT** component requesting support for this step.
+
 4. In the Edit Company Settings click on Extension Management Configuration
 
    ![Register SFSF System](./images/sf-2.png)
