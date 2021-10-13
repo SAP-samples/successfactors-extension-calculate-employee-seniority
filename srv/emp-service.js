@@ -30,15 +30,12 @@ module.exports = async srv => {
 
         // START SENIORITY RULES
 
-        console.log(employee.hireDate)
         let hireDate = new Date(employee.hireDate)
-        console.log(hireDate)
         let terminationDate = new Date(employee.terminationDate)
         let originalStartDate = new Date(employee.originalStartDate)
         let diffInMs = null;
 
         if (status.includes("HIR", 0)) {
-            minuendDate = Date.now()
             diffInMs = Date.now() - hireDate;
         }
         else if (status.includes("TER", 0)) {
