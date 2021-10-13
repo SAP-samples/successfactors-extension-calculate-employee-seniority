@@ -4,9 +4,8 @@ module.exports = async srv => {
     const messaging = await cds.connect.to('messaging');
 
     const { Employee } = srv.entities
-    const { EmployeeEvent } = srv.events
 
-    messaging.on(EmployeeEvent, async (msg) => {
+    messaging.on('sap/successfactors/SFPART057671/isc/contractchange', async (msg) => {
         console.log("<< create event caught", msg);
 
         
@@ -46,7 +45,7 @@ module.exports = async srv => {
             diffInMs = Math.abs(terminationDate - originalStartDate);
         } 
         else if (status.includes("RE", 0)) {
-            let history = await srv.run(SELECT.one.from(Employee).where({ userId: employee.userId, status: { like: '%TER%' } }).orderBy('terminationDate', 'desc'));
+            let history = await srv.run(SELECT.one.from(Employee).where({ userId: employee.userId, status: { like: '%TER%' } }).orderBy('terminationDate desc'));
             if (history != null && history.terminationDate != null) {
                 terminationDate = new Date(history.terminationDate)
                 diffInMs = Math.abs(hireDate - terminationDate);
