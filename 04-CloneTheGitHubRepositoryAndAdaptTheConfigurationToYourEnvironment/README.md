@@ -78,18 +78,14 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
             },
 ```
 
-10. Modify the topic name in *emp-service.cds* to include the name of the SFSF system registered.
+10. Modify the topic name in *emp-service.js* to include the name of the SFSF system registered.
 
 
 ```js
-@topic : 'sap/successfactors/<SFSF System name>/isc/contractchange'
-    event EmployeeEvent {
-        userId: String;
-        hireDate: String;
-        terminationDate: String;
-        originalStartDate: String;
-        status: String;
-    }
+messaging.on(
+    "sap/successfactors/SFPART057671/isc/contractchange",
+    ...
+)
 ```
 
 11. Change the [redirect URL](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/xs-security.json#L9) in *xs-security.json*, based on your BAS URL.
