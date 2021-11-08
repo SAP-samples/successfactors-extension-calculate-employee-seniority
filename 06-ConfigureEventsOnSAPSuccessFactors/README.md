@@ -70,11 +70,15 @@ You can create an integration from a starting entity and add data from other ent
 
   5. Select the event you want to associate the integration job with. These steps will cover the **Employee Hire** event, but you should repeat the steps for the **Employee Rehire** and **Employment Termination** events to fully test the extension.
 
+   You can now add the remaining items as Child elements, as below:
+
   ![Integration Event](./images/IntegrationEvent.png)
 
   6. Provide a name for the integration and click **Next**
 
-  7. In the **Configure Fields** tab Click the **+** button > Insert Sibling Elements > Set as Associated Field
+  7. In the **Configure Fields** tab Click the **+** button > Insert Sibling Elements > Set the label to **data**. This is the container object that they payload will be nested under. The SAP Event Mesh expects the payload to be present inside an object called **data**.
+
+   Add the remaining items as Child Elements, as in the image below.
 
   ![Integration Elements](./images/IntegrationElements.png)
 
@@ -91,7 +95,7 @@ You can create an integration from a starting entity and add data from other ent
   | User Id             |	Job Information (EmpJob)           | userId                          | Edm.String   |
   | Original Start Date |	Employment Details (EmpEmployment) | employmentNav/originalStartDate | Edm.DateTime |
   | Status              |	Job Information (EmpJob)           | eventReason	                   | Edm.String   |
-  | Hire Date           |	User                               | userNav/hireDate                | Edm.DateTime |
+  | Hire Date           |	Job Information (EmpJob)           | startDate                       | Edm.DateTime |
   | Termination Date	  | Employment Details (EmpEmployment) | employmentNav/endDate           | Edm.DateTime |
 
   11. On the **Destination Settings** tab, select **REST Server Settings from Security Center** and select the **BTP_SENIORITY_CALC** destination you created previously. Click Next.
