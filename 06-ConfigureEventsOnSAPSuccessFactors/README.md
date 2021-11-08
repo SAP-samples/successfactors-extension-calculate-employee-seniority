@@ -78,7 +78,7 @@ You can create an integration from a starting entity and add data from other ent
 
   7. In the **Configure Fields** tab Click the **+** button > Insert Sibling Elements > Set the label to **data**. This is the container object that they payload will be nested under. The SAP Event Mesh expects the payload to be present inside an object called **data**.
 
-   Add the remaining items as Child Elements, as in the image below.
+     Add the remaining items as Child Elements, as in the image below.
 
   ![Integration Elements](./images/IntegrationElements.png)
 
