@@ -6,17 +6,13 @@ You don't have to follow the entire mission, but at minimum you need to ensure t
 
 The remaining steps are similar to the ones covered in the main mission branch, namely:
 
-1. Go to <https://github.tools.sap/btp-use-case-factory/successfactors-appgyver-seniority-calc> and fork the repository so that you have the source code and can further on work and change the code. (For instance, in one of the subsequent steps you can customize the business rules to your own requirements)
+1. Go to <https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/tree/sfsf-mobile-appgyver> and fork the repository so that you have the source code and can further on work and change the code. (For instance, in one of the subsequent steps you can customize the business rules to your own requirements)
 
     ![Fork Repo](./images/fork-repo.png)
-
-  - INTERNAL NOTE TO BE REMOVED
-  - Please use the ```dev-termination-date``` branch. We will move that one external GitHub after mission validation
-
+  
 2. Choose your user as destination for the fork. 
 
     <img src="./images/fork-repo-user.png" alt="Choose user for fork" width="250">
-
 
     You should now have the following repository: https://github.com/**YourUser**/successfactors-extension-calculate-employee-seniority 
 
@@ -38,13 +34,19 @@ The remaining steps are similar to the ones covered in the main mission branch, 
 
     > IMPORTANT: Replace **YourUser** with your actual username. 
 
-6.	Click on *File* in the menu on the top and choose *Open Workspace* in the drop down.
+6. Checkout the ```sfsf-mobile-appgyver ``` branch
+   
+     ```
+    git checkout sfsf-mobile-appgyver
+    ```
+
+7.	Click on *File* in the menu on the top and choose *Open Workspace* in the drop down.
 
     ![Open Workspace](./images/dev-cap-app-7.png)
  
-7.	Open the project by selecting projects -> successfactors-extension-calculate-employee-seniority and click on *Open*
+8.	Open the project by selecting projects -> successfactors-extension-calculate-employee-seniority and click on *Open*
 
-8. After the project has been cloned and opened successfully, you need to adapt the configuration of the project to your environment. For this, you have to enter the name of the registered SAP SuccessFactors System from the step [Setup SAP BTP and SAP SuccessFactors connectivity and extensibility](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/tree/mission/02-SetupSAPBTPAndSAPSuccessFactorsConnectivityAndExtensibility) (in this case *mySF*) into two files:
+9. After the project has been cloned and opened successfully, you need to adapt the configuration of the project to your environment. For this, you have to enter the name of the registered SAP SuccessFactors System from the step [Setup SAP BTP and SAP SuccessFactors connectivity and extensibility](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/tree/mission/02-SetupSAPBTPAndSAPSuccessFactorsConnectivityAndExtensibility) (in this case *mySF*) into two files:
 
 *mta.yaml*:
   ```yaml
@@ -70,7 +72,7 @@ The remaining steps are similar to the ones covered in the main mission branch, 
     ...
   ```
 
-9. Change the [payload URI](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/srv/emp-service.js#L72) in *emp-service.js* . It depends on the SF Instance.
+10. Change the [payload URI](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/srv/emp-service.js#L72) in *emp-service.js* . It depends on the SF Instance.
 
 
   ```js
@@ -82,7 +84,7 @@ The remaining steps are similar to the ones covered in the main mission branch, 
               },
   ```
 
-10. Modify the topic name in *emp-service.js* to include the name of the SFSF system registered.
+11. Modify the topic name in *emp-service.js* to include the name of the SFSF system registered.
 
 
   ```js
@@ -92,7 +94,7 @@ The remaining steps are similar to the ones covered in the main mission branch, 
   )
   ```
 
-11. Change the [redirect URL](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/xs-security.json#L9) in *xs-security.json*, based on your BAS URL.
+12. Change the [redirect URL](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/xs-security.json#L9) in *xs-security.json*, based on your BAS URL.
 
   ```json
   {
