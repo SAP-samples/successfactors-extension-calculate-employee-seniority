@@ -1,0 +1,33 @@
+##### GET (Get Empolyee Data)
+
+GET http://localhost:4004/employee/Employee
+Content-Type: application/json
+
+
+##### POST (Create a new Employee)
+
+POST http://localhost:4004/employee/Employee
+Content-Type: application/json
+
+{
+    "userId": "sfadmin",
+    "hireDate": "2019-01-01T00:00:00.000Z",
+    "originalStartDate": "2019-02-01T00:00:00.000Z",
+    "terminationDate": null,
+    "status": "EXCEPTION", 
+    "seniority": null
+}
+
+
+##### Update (Update the status) ** reploace the UUID based on your data ** /Employee('UUID')
+
+PATCH http://localhost:4004/employee/Employee('80057181-ebb0-450b-aeaf-25954872bbdd')
+Content-Type: application/json
+
+{
+    "ID": "80057181-ebb0-450b-aeaf-25954872bbdd",
+    "terminationDate": "2021-10-27T08:15:05.683Z",
+    "hireDate": "2016-01-01T00:00:00.000Z",
+    "status": "REHREH",
+    "userId": "100256"
+}
