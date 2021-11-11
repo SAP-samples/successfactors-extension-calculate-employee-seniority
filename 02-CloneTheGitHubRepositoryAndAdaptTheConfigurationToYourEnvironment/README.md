@@ -72,7 +72,7 @@ The remaining steps are similar to the ones covered in the main mission branch, 
     ...
   ```
 
-10. Change the [payload URI](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/srv/emp-service.js#L72) in *emp-service.js* . It depends on the SF Instance.
+10. Change the [payload URI](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/srv/emp-service.js#L68) in *emp-service.js* . It depends on the SF Instance.
 
 
   ```js
