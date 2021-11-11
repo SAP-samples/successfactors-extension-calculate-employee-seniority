@@ -53,14 +53,14 @@ Subscriptions required in your SAP Business Technology Platform Account:
 
 ### Pre-requisites: [Configure the Calculate Employee Seniority use case](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/tree/mission)
 
-### Step 1: [Set up AppGyver on SAP BTP using a booster](../mission/01-SetupSAPBusinessTechnologyPlatform)
-### Step 2: [Clone the GitHub repository and adapt the configuration to your environment](../mission/02-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
-### Step 3: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission/03-DeployCAPApplicationToCloudFoundryAndHANACloud)
-### Step 4: [Create an SAP AppGyver project ](../mission/04-CreateSAPAppGyverProject)
-### Step 5: [Connect SAP AppGyver to the backend via OData](../mission/05-ConnectSAPAppGyverToTheBackendViaOData)
-### Step 6: [Modeling logic with SAP AppGyver no-code features ](../mission/06-ModelingLogicWithSAPAppGyverNoCodeFeatures)
-### Step 7: [Test end to end from SAP AppGyver to SAP SuccessFactors](../mission/07-TestEndToEndFromSAPAppGyverToSAPSuccessFactors)
-### Step 8: [Customize the application and services for your own scenario](../mission/08-CustomizeTheApplicationAndServicesForYourOwnScenario)
+### Step 1: [Set up AppGyver on SAP BTP using a booster](../mission-sfsf-mobile-appgyver/01-SetupSAPBusinessTechnologyPlatform)
+### Step 2: [Clone the GitHub repository and adapt the configuration to your environment](../mission-sfsf-mobile-appgyver/02-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
+### Step 3: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission-sfsf-mobile-appgyver/03-DeployCAPApplicationToCloudFoundryAndHANACloud)
+### Step 4: [Create an SAP AppGyver project ](../mission-sfsf-mobile-appgyver/04-CreateSAPAppGyverProject)
+### Step 5: [Connect SAP AppGyver to the backend via OData](../mission-sfsf-mobile-appgyver/05-ConnectSAPAppGyverToTheBackendViaOData)
+### Step 6: [Modeling logic with SAP AppGyver no-code features ](../mission-sfsf-mobile-appgyver/06-ModelingLogicWithSAPAppGyverNoCodeFeatures)
+### Step 7: [Test end to end from SAP AppGyver to SAP SuccessFactors](../mission-sfsf-mobile-appgyver/07-TestEndToEndFromSAPAppGyverToSAPSuccessFactors)
+### Step 8: [Customize the application and services for your own scenario](../mission-sfsf-mobile-appgyver/08-CustomizeTheApplicationAndServicesForYourOwnScenario)
 
 
 ## Requirements
