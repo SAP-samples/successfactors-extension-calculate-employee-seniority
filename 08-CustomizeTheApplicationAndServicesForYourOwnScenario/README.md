@@ -13,17 +13,17 @@ In this mission, we enriched the original Calculate Employee Seniority use case 
 
       ```"on": [ { "ref": ["userNav", "userId"] }, "=", { "ref": ["$self", "userId"] } ]```
 
-1. The new model, ```PhotoUser``` was added to [package.json](https://github.tools.sap/btp-use-case-factory/successfactors-appgyver-seniority-calc/blob/dev-termination-date/package.json) and set to the ```seniority-calc-sfsf-service``` destination
+2. The new model, ```PhotoUser``` was added to [package.json](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/sfsf-mobile-appgyver/package.json) and set to the ```seniority-calc-sfsf-service``` destination
 
-1. Redefined ```originalStartDate```, ```hireDate```, and ```terminationDate``` as **Timestamp** to accommodate SAP AppGyver OData requirements in [schema.cds](https://github.tools.sap/btp-use-case-factory/successfactors-appgyver-seniority-calc/blob/dev-termination-date/db/schema.cds), and annotated the GUID with 
+3. Redefined ```originalStartDate```, ```hireDate```, and ```terminationDate``` as **Timestamp** to accommodate SAP AppGyver OData requirements in [schema.cds](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/sfsf-mobile-appgyver/db/schema.cds), and annotated the GUID with 
 
-1. Added a [srv/server.js](https://github.tools.sap/btp-use-case-factory/successfactors-appgyver-seniority-calc/blob/dev-termination-date/srv/server.js) to address CORS for SAP AppGyver with commented locked down version
+4. Added a [srv/server.js](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/sfsf-mobile-appgyver/srv/server.js) to address CORS for SAP AppGyver with commented locked down version
 
-1. Enhanced [request.http](https://github.tools.sap/btp-use-case-factory/successfactors-appgyver-seniority-calc/blob/dev-termination-date/srv/request.http) with sample requests
+5. Enhanced [request.http](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/sfsf-mobile-appgyver/srv/request.http) with sample requests
 
-1. Added remote entities and mixin view for consumption by SAP AppGyver in [emp-service.cds](https://github.tools.sap/btp-use-case-factory/successfactors-appgyver-seniority-calc/blob/dev-termination-date/srv/emp-service.cds) and annotated ID with ```@odata.Type:'Edm.String'```
+6. Added remote entities and mixin view for consumption by SAP AppGyver in [emp-service.cds](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/sfsf-mobile-appgyver/srv/emp-service.cds) and annotated ID with ```@odata.Type:'Edm.String'```
 
-1. Significant additions to service implementation [emp-service.js](https://github.tools.sap/btp-use-case-factory/successfactors-appgyver-seniority-calc/blob/dev-termination-date/srv/emp-service.js) for the following:
+7. Significant additions to service implementation [emp-service.js](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/sfsf-mobile-appgyver/srv/emp-service.js) for the following:
     - Add exception criteria to calcSeniorityTotalDays for rehires where the previous termination event doesn't exist in SAP BTP persistence
     - Duplicate calcSeniorityTotalDays into calcSeniorityTotalDaysException for use in exception handling
     - Event handler for READ of ProfileMixin view
