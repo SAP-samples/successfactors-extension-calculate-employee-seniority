@@ -1,34 +1,31 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/successfactors-extension-calculate-employee-seniority)](https://api.reuse.software/info/github.com/SAP-samples/successfactors-extension-calculate-employee-seniority)
 
-# Calculate Employee Seniority with event-driven extensions
+# Create a custom mobile app to extend HR capabilities
 ## Description
-Calculate Employee Seniority is an extension to SAP SuccessFactors to manage complex seniority scenarios that impact Human Resources, Employee Benefits, and Employee Payroll. This solution can apply appropriate rules to a wide variety of Human Resources actions, including: 1. Employee Hire 2. Employment Termination 3. Employee Rehire These seniority rules can impact employee pension plans, employee savings plans such as (USA) 401k employer contributions/matches, and other programs. It's also possible to retrieve employee history from the same extension. This automatic calculation frees up HR specialists from having to maintain eligibility dates manually. Different industries can leverage this use case where seniority calculations are needed. Some organizations have very complex rules that govern employee eligibility for 401k and other benefits. This process is currently manual and error-prone for HR staff members and potentially causing legal challenges to the enterprise. These rules are often due to collective bargaining agreements, and the rules and regulations can be both demanding and inflexible. They may also require precise calculations triggered by breaks in employment service, employee rehires dates, employee leaves of absence, etc. This extension provides organizations with a flexible tool to manage such complex scenarios. Rather than rely on human record-keeping and reporting, this solution can automatically apply rules to determine seniority. This solution will reduce the workload on the HR team as well as improve accuracy.
+Create a custom mobile app for employees that extends HR functions and helps enable a mobile workforce. Leverage low-code technologies to quickly design and deploy the app to any device and provide business users with a seamless and frictionless experience, wherever they are. This is especially important for desk-less workers that want key functionality in a ready to use tool, tailored to their daily functions.
 
 **Current Position - What is the challenge?**
-Some organizations have very complex rules that govern employee eligibility for 401k / employee saving plan match and other benefits. This process is currently manual and error-prone for HR staff members and potentially causing legal challenges to the enterprise.
-
-These rules are often due to collective bargaining agreements, and the rules and regulations can be demanding & inflexible.
-
-Rules may include precise calculations triggered by employee broken service, employee rehires dates etc.
+Customers often want to expand the user experience of their core business systems for key functions such as finance, procurement, and human resources. They want to unify common staff functions and content into a simple, intuitive mobile application to maintain employee productivity and engagement.
 
 **Destination - What is the outcome?**
-This automatic calculation frees up HR specialists from having to maintain eligibility dates manually. Different industries can leverage this use case where seniority calculations are needed.
+Provide employees with timely, contextual information right from their mobile device to help them become more self-sufficient and improve productivity. Empower a mobile workforce to fulfill customer requests from anywhere.
 
 **How You Get There - What is the solution?**
-Calculate Employee Seniority uses SAP SuccessFactors Intelligent Service Center, together with the SAP BTP, to adjust the employee's seniority date based upon events and calculations, and store the history.
-This application provides HR with custom functionality to calculate seniority dates without manual intervention. The Calculate Employee Seniority Rules are integrated with an SAP Extension suite extension for historical data to access an employee's history for specific calculations.
+The application notifies staff about key updates using notifications and leverages real-time data from SAP SuccessFactors and the SAP BTP to ensure relevant information for mobile workers. It enables HR business partners to update employee information on the fly, with a simple, curated experience.
 
 ### Solution Diagram
 
-![solution diagram](../mission/images/solution_diagram.png) 
+![solution diagram](images/Create%20a%20custom%20mobile%20app%20to%20extend%20HR%20capabilities%20-%20Solution%20Diagram.png)
 
 The Calculate Employee Seniority extension is developed using the SAP Cloud Application programming Model (CAP) and runs on the SAP BTP, Cloud Foundry runtime. It consumes platform services like SAP Event Mesh, SAP HANA Cloud and the Destination service. The events occuring in SAP SuccessFactors are inserted into the SAP Event Mesh queue. The application running in Cloud Foundry is notified on events, consumes them from the queue and inserts the event data into the HANA Cloud database, applies rules for seniority calculation and finally updates those results to custom fields on SAP SuccessFactors.
+
+In this addition to the use case, SAP AppGyver is added to quickly created a native mobile application for exception handling. There are enhancements to the CAP service, incorporating remote SAP SuccessFactors services, and the ability to handle CORS communication between SAP AppGyver and SAP SuccessFactors OData services. This has the increased benefit of proxying specific entities from the SFSF backend on-demand, reducing data duplication of sensitive HR information. 
 
 ## Prerequisites
 The required systems and components are:
 
 - SAP SuccessFactors (SFSF)
-- SAP BTP account
+- SAP BTP enterprise or trial account
 
 Entitlements/Quota required in your SAP Business Technology Platform Account:
 
@@ -42,25 +39,29 @@ Entitlements/Quota required in your SAP Business Technology Platform Account:
 | SAP HANA Cloud                    | hana        | 1                   |
 | SAP SuccessFactors Extensibility  | api-access  | 1                   |
 
+
 Subscriptions required in your SAP Business Technology Platform Account:
 
 | Subscription                      | Plan             |
 | --------------------------------- | ---------------- |
 | SAP Business Application Studio   | standard         |
 | SAP Event Mesh                    | standard         |
+| SAP AppGyver                      | standard         |
+
 
 ## Setup & Configuration
 
-### Step 1: [Setup SAP Business Technology Platform](../mission/01-SetupSAPBusinessTechnologyPlatform)
-### Step 2: [Setup SAP BTP and SAP SuccessFactors connectivity and extensibility](../mission/02-SetupSAPBTPAndSAPSuccessFactorsConnectivityAndExtensibility)
-### Step 3: [Configure SAP Business Application Studio](../mission/03-ConfigureSAPBusinessApplicationStudio)
-### Step 4: [Clone the GitHub repository and adapt the configuration to your environment](../mission/04-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
-### Step 5: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission/05-DeployCAPApplicationToCloudFoundryAndHANACloud)
-### Step 6: [Configure Events on SAP SuccessFactors](../mission/06-ConfigureEventsOnSAPSuccessFactors)
-### Step 7: [Configure custom seniority fields in SAP SuccessFactors](../mission/07-ConfigureCustomSeniorityFieldsInSAPSuccessFactors)
-### Step 8: [Test End to End from SAP SuccessFactors to CAP Application](../mission/08-TestEndToEndFromSAPSuccessFactorsToCAPApplication)
-### Step 9: [Run CAP Application in SAP Business Application Studio](../mission/09-RunCAPApplicationInSAPBusinessApplicationStudio)
-### Step 10: [Customize Seniority Rules to your own requirements](../mission/10-CustomizeSeniorityRulesToYourOwnRequirements)
+### Pre-requisites: [Configure the Calculate Employee Seniority use case](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/tree/mission)
+
+### Step 1: [Set up AppGyver on SAP BTP using a booster](../mission/01-SetupSAPBusinessTechnologyPlatform)
+### Step 2: [Clone the GitHub repository and adapt the configuration to your environment](../mission/02-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
+### Step 3: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission/03-DeployCAPApplicationToCloudFoundryAndHANACloud)
+### Step 4: [Create an SAP AppGyver project ](../mission/04-CreateSAPAppGyverProject)
+### Step 5: [Connect SAP AppGyver to the backend via OData](../mission/05-ConnectSAPAppGyverToTheBackendViaOData)
+### Step 6: [Modeling logic with SAP AppGyver no-code features ](../mission/06-ModelingLogicWithSAPAppGyverNoCodeFeatures)
+### Step 7: [Test end to end from SAP AppGyver to SAP SuccessFactors](../mission/07-TestEndToEndFromSAPAppGyverToSAPSuccessFactors)
+### Step 8: [Customize the application and services for your own scenario](../mission/08-CustomizeTheApplicationAndServicesForYourOwnScenario)
+
 
 ## Requirements
 
