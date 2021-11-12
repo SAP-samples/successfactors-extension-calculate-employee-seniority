@@ -86,13 +86,13 @@ You can create an integration from a starting entity and add data from other ent
 
   ![Integration Entity](./images/IntegrationEntity.png)
 
-  9. Set the Label to ```User Id``` and description, as desired.
+  9. Set the Label to ```userId``` and description, as desired.
 
   10. Repeat steps 7-8 for the labels **originalStartDate**, **status**, **hireDate**, and **terminationDate** and see below for the mappings to source entities.
 
   | Field Label         |	SF Entity	                         | Association                     |	Data Type   |
   | ------------------- | ---------------------------------- | ------------------------------- | ------------ |
-  | User Id             |	Job Information (EmpJob)           | userId                          | Edm.String   |
+  | userId             |	Job Information (EmpJob)           | userId                          | Edm.String   |
   | Original Start Date |	Employment Details (EmpEmployment) | employmentNav/originalStartDate | Edm.DateTime |
   | Status              |	Job Information (EmpJob)           | eventReason	                   | Edm.String   |
   | Hire Date           |	Job Information (EmpJob)           | startDate                       | Edm.DateTime |
