@@ -90,13 +90,13 @@ You can create an integration from a starting entity and add data from other ent
 
   10. Repeat steps 7-8 for the labels **originalStartDate**, **status**, **hireDate**, and **terminationDate** and see below for the mappings to source entities.
 
-  | Field Label         |	SF Entity	                         | Association                     |	Data Type   |
+  | Field Label         |	SF Entity	                         | Association                     |	Data Type    |
   | ------------------- | ---------------------------------- | ------------------------------- | ------------ |
-  | userId             |	Job Information (EmpJob)           | userId                          | Edm.String   |
-  | Original Start Date |	Employment Details (EmpEmployment) | employmentNav/originalStartDate | Edm.DateTime |
-  | Status              |	Job Information (EmpJob)           | eventReason	                   | Edm.String   |
-  | Hire Date           |	Job Information (EmpJob)           | startDate                       | Edm.DateTime |
-  | Termination Date	  | Employment Details (EmpEmployment) | employmentNav/endDate           | Edm.DateTime |
+  | userId              |	Job Information (EmpJob)           | userId                          | Edm.String   |
+  | originalStartDate   |	Employment Details (EmpEmployment) | employmentNav/originalStartDate | Edm.DateTime |
+  | status              |	Job Information (EmpJob)           | eventReason	                    | Edm.String   |
+  | hireDate            |	Job Information (EmpJob)           | startDate                       | Edm.DateTime |
+  | terminationDate	    | Employment Details (EmpEmployment) | employmentNav/endDate           | Edm.DateTime |
 
   11. On the **Destination Settings** tab, select **REST Server Settings from Security Center** and select the **BTP_SENIORITY_CALC** destination you created previously. Click Next.
 
