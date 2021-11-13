@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "991c4f2b-5f26-4fdd-9cab-df161d04d864",
+		"name": "Seniority Calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get history",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "<bound client secret>",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "<bound client id>",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://<uaa endpoint>/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "accessToken",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "CAP-Seniority-Calc",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://<cap-application-route>.cfapps.eu10.hana.ondemand.com/employee/Employee?$count=true&$format=json&$orderby=createdAt%20desc",
+					"protocol": "https",
+					"host": [
+						"<cap-application-route>",
+						"cfapps",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"employee",
+						"Employee"
+					],
+					"query": [
+						{
+							"key": "$count",
+							"value": "true"
+						},
+						{
+							"key": "$format",
+							"value": "json"
+						},
+						{
+							"key": "$orderby",
+							"value": "createdAt%20desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create record",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "CAP-Seniority-Calc",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "<bound client secret>",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "<bound client id>",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://<uaa endpoint>/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"103253\",\n    \"hireDate\": \"2021-06-01\",\n    \"terminationDate\": null,\n    \"originalStartDate\": \"2021-06-01\",\n    \"status\": \"HIRENEW\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://<cap-application-route>.cfapps.eu10.hana.ondemand.com/employee/Employee",
+					"protocol": "https",
+					"host": [
+						"<cap-application-route>",
+						"cfapps",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"employee",
+						"Employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create event",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "<event mesh client secret>",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "<event mesh client id> ",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://<uaa endpoint>/oauth/token",
+							"type": "string"
+						},
+						{
+							"key": "tokenName",
+							"value": "CAP-Seniority-Calc-EM",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-qos",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\":{\n  \"terminationDate\": \"\",\n  \"originalStartDate\": \"2016-04-07T00:00:00Z\",\n  \"hireDate\": \"2021-11-12T00:00:00Z\",\n  \"userId\": \"gnelson\",\n  \"status\": \"REHREH\"\n}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://enterprise-messaging-pubsub.cfapps.eu10.hana.ondemand.com/messagingrest/v1/topics/your%2Ftopic%2Fhere/messages",
+					"protocol": "https",
+					"host": [
+						"enterprise-messaging-pubsub",
+						"cfapps",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"messagingrest",
+						"v1",
+						"topics",
+						"your%2Ftopic%2Fhere",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
