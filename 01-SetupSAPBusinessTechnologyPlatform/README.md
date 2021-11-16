@@ -61,27 +61,6 @@ You will now prepare your SAP Business Technology Platform environment with the 
 
  6. Click on *Add 1 Service Plan* and save
 
-
-## Add Entitlement for SAP SuccessFactors Extensibility
-
- 1. Now click on your Subaccounts Name to open 
-
- 2. Navigate to *Entitlements* and click on *Configure Entitlements* 
-
- ![Configure Entitlements](./images/booster7.png)
-
- 3. Then choose *Add Service Plans*
-
-![Add Service Plans](./images/booster8.png)
-
- 4. Search for "SuccessFactors" in the pop-up window and select *SAP SuccessFactors Extensibility*
-
- 5. SelectAvailable Plan "api-access"
-    
-![Add Service Plan](./images/booster10.png)
-
- 6. Click on *Add 1 Service Plan* and save
-
  ## Create HANA Cloud Instance 
 
 This step is required for newly created accounts, e.g. with Boosters where you don't have HANA Cloud instance. In case of existing subaccount with HANA Cloud instance, you can skip this section
