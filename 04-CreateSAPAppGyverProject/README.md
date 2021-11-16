@@ -35,7 +35,8 @@ This first page contains an image list that we will eventually connect to a remo
 
       ![Header cells](./images/10headercells.png)
 
-    - Add a Title component to the first cell and add an icon component to the second and third cells. Set the Typography > Text color to $colorContentPrimary 
+    - Add a Title component to the first cell and add an icon component to the second and third cells. Set the Typography > Text color to $colorContentPrimary
+    - Change the Title component text to **Exceptions** 
     - Select the filter and sort icons respectively so that your app looks like this:
 
       ![Header complete](./images/11headercomplete.png)
@@ -70,11 +71,13 @@ Now save the application and move on to create the 2nd page.
 The second page will contain the details for a specific employee. Some data will be populated from the extension database, running on SAP HANA Cloud, and other details such as the employee's past termination date and system configured seniority date, will be retrieved from SAP SuccessFactors on demand. These pieces of info will equip the HR business partner with the details they need to correct the exception.
 
 1. Click the page name link in the top left to return to the page gallery, where you can add a new page. Do so, and name it **2. Exception Details**
+
+1. Remove the initial components from this page as well, like before
+
 1. Go back to **1. Exception List**, select the top level container, rename it to Page Template Container, and click **Convert to New Component**
 
     ![Convert to new component](./images/2.1TemplateComponent.png)
 
-1. Remove the initial components from this page as well, as before
 1. Go to **2. Exception Details**, select **BY ME** in the component list, and add **Page Template Container** to the new page
     - Set the background image again
     - Double click to edit the custom component details and delete the image list
