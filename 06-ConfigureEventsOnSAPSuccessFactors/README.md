@@ -102,7 +102,7 @@ You can create an integration from a starting entity and add data from other ent
 
   ![Integration Destination Settings](./images/IntegrationDestination.png)
 
-  12. Review the summary, save the integration job, and then click **Go to Intelligent Service Center** to complete the mapping of the integration flow to an intelligent event.
+  12. Review the summary, save the integration job, and then click **Go to Intelligent Service Center** to complete the mapping of the integration flow to an intelligent event. You can also use the **Run Now** button to confirm that the job ran as expected. Keep in mind this will push a message into your Event Mesh queue and may result in a new record in the persistence.
 
   ![Integration Summary](./images/IntegrationSummary.png)
 
