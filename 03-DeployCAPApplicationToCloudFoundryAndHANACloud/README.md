@@ -3,7 +3,7 @@
 Follow the instructions for the [original mission](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/tree/mission/05-DeployCAPApplicationToCloudFoundryAndHANACloud) but note that the application id for this mission is ```seniority-calc-appgyver```
 
   - If you previously deployed the ```seniority-calc-srv``` application from the main mission branch, you should stop it before proceeding. You can do this from the applications section of your Cloud Foundry space
-  - As a final step before you access the entities, add a sample exception record so ProfileMixin returns some data. You can use the POST request in [request.http](../../fsf-mobile-appgyver/srv/request.http#L7) in conjunction with ```cds watch``` from SAP Business Application Studio
+  - As a final step before you access the entities, add a sample exception record so EmployeeProfile returns some data. You can use the POST request in [request.http](../../fsf-mobile-appgyver/srv/request.http#L7) in conjunction with ```cds watch``` from SAP Business Application Studio
 
 ### Explanation of services
 
@@ -12,12 +12,12 @@ The following services endpoints should be available upon deployment of the CAP 
   ![CAP Service endpoints](./images/1endpoints.png)
     
 1. Employee - This is the locally managed entity on SAP BTP that the original extension writes to, and that we will use to make updates via SAP AppGyver. An event handler for ```srv.after("UPDATE")``` has been added to recalculate seniority and write it back to Employee Central
-2. Photo - Remote entity on SAP SuccessFactors; no service implementation for this entity
+2. Photo - Remote entity on SAP SuccessFactors; basic service implementation to apply photoType filter and OData v2
 3. User - Remote entity on SAP SuccessFactors; no service implementation for this entity
-4. EmpEmployment - Remote entity on SAP SuccessFactors; no service implementation for this entity
+4. EmpEmployment - Remote entity on SAP SuccessFactors; basic service implementation for OData v2
 5. ProfileMixin - View combining fields from the 4 entities above; custom service implementation for READ
     - Returns all records of status = "EXCEPTION"
-    - Returns a single record when accessed by key, such as /employee/ProfileMixin('15dae86b-1537-4d3d-a340-1d6ac4e4f5c7')
+    - Returns a single record when accessed by key, such as /employee/EmployeeProfile('15dae86b-1537-4d3d-a340-1d6ac4e4f5c7')
 
 ### Changes to entity metadata
 
@@ -44,10 +44,10 @@ Metadata for the Employee entity has been updated as follows:
 
 Note that at the time of writing, SAP AppGyver OData understands Edm.DateTimeOffset (e.g. CAP type Timestamp) but not Edm.Date (e.g. CAP type Date). ID was also changed to Edm.String from Edm.UUID
 
-Metadata for the ProfileMixin entity as follows:
+Metadata for the EmployeeProfile (previously called ProfileMixin) entity as follows:
 
 ```
-<EntityType Name="ProfileMixin">
+<EntityType Name="EmployeeProfile">
     <Key>
         <PropertyRef Name="ID"/>
     </Key>
