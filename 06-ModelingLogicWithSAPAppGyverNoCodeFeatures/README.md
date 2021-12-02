@@ -39,7 +39,7 @@ In this section you will connect navigation between the 2 pages so that the sele
 
   4. Select the ***Fetch Dates*** button and add 2 **Set page variable** logic components on the canvas
      - Set the variable names to termDate and seniorityDate
-     - Set the assigned value to a formula with the syntax ```SUBSTRING(data.ProfileMixin1.lastTerminationDate, 0, 10)``` and ```SUBSTRING(data.ProfileMixin1.seniorityDate, 0, 10)```
+     - Set the assigned value to a formula with the syntax ```SUBSTRING(data.EmployeeProfile1.lastTerminationDate, 0, 10)``` and ```SUBSTRING(data.EmployeeProfile1.seniorityDate, 0, 10)```
 
        ![Page variables on click](./images/6SetVariablesOnClick.png)
 
