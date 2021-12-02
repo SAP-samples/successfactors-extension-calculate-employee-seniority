@@ -33,3 +33,5 @@ default-env.json
 
 # auto generated wildcard
 bas/seniority-calc-cds/.env1
+# auto generated wildcard
+.env

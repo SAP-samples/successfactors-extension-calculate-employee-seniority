@@ -1,33 +1,61 @@
-##### GET (Get Empolyee Data)
 
 GET http://localhost:4004/employee/Employee
 Content-Type: application/json
 
-
-##### POST (Create a new Employee)
+##### POST
 
 POST http://localhost:4004/employee/Employee
 Content-Type: application/json
 
 {
-    "userId": "sfadmin",
-    "hireDate": "2019-01-01T00:00:00.000Z",
-    "originalStartDate": "2019-02-01T00:00:00.000Z",
-    "terminationDate": null,
-    "status": "EXCEPTION", 
+    "userId": "12377",
+    "hire_date": "2021-01-01",
+    "original_start_date": "2021-02-01",
+    "termination_date": null,
+    "status": "HIRENEW",
     "seniority": null
 }
 
 
-##### Update (Update the status) ** reploace the UUID based on your data ** /Employee('UUID')
+##### PATCH
 
-PATCH http://localhost:4004/employee/Employee('80057181-ebb0-450b-aeaf-25954872bbdd')
+PATCH http://localhost:4004/employee/Employee('49ac8ab2-be48-4084-8496-520b2c3e4884')
 Content-Type: application/json
 
 {
-    "ID": "80057181-ebb0-450b-aeaf-25954872bbdd",
-    "terminationDate": "2021-10-27T08:15:05.683Z",
-    "hireDate": "2016-01-01T00:00:00.000Z",
-    "status": "REHREH",
-    "userId": "100256"
+    "userId": "101052",
+    "terminationDate": "2018-09-18T00:00:00.000Z",
+    "status": "REHREH"
 }
+
+
+##### POST
+
+POST http://localhost:4004/employee/Employee
+Content-Type: application/json
+
+{
+    "userId": "12377",
+    "hire_date": "2021-01-01",
+    "original_start_date": "2021-02-01",
+    "termination_date": "2021-03-01",
+    "status": "TEROTH",
+    "seniority": null
+}
+
+##### POST
+
+POST http://localhost:4004/employee/Employee
+Content-Type: application/json
+
+{
+    "userId": "12377",
+    "hire_date": "2021-04-01",
+    "original_start_date": "2021-05-01",
+    "termination_date": null,
+    "status": "REHREH",
+    "seniority": null
+}
+   
+
+## REHREH HIRENEW TEROTH

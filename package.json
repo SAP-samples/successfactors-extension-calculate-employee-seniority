@@ -6,10 +6,11 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^5.1.3",
-    "@sap/hana-client": "^2.8.20",
-    "@sap/xb-msg-amqp-v100": "^0.9.51",
-    "@sap/xssec": "^3.2.0",
+    "@sap/cds": "^5.6.3",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.8.1",
+    "@sap/hana-client": "^2.10.15",
+    "@sap/xb-msg-amqp-v100": "^0.9.56",
+    "@sap/xssec": "^3.2.10",
     "cors": "^2.8.5",
     "express": "^4",
     "hdb": "^0.18.3",
@@ -19,7 +20,7 @@
     "node": "14.x"
   },
   "devDependencies": {
-    "@sap/hdi-deploy": "^4.2.0",
+    "@sap/hdi-deploy": "^4.2.3",
     "sqlite3": "^5.0.2"
   },
   "scripts": {
@@ -76,7 +77,7 @@
         }
       },
       "PhotoUser": {
-        "kind": "odata",
+        "kind": "odata-v2",
         "model": "srv/external/PhotoUser",
         "credentials": {
           "destination": "seniority-calc-sfsf-service",
