@@ -15,7 +15,7 @@ The following services endpoints should be available upon deployment of the CAP 
 2. Photo - Remote entity on SAP SuccessFactors; basic service implementation to apply photoType filter and OData v2
 3. User - Remote entity on SAP SuccessFactors; no service implementation for this entity
 4. EmpEmployment - Remote entity on SAP SuccessFactors; basic service implementation for OData v2
-5. ProfileMixin - View combining fields from the 4 entities above; custom service implementation for READ
+5. EmployeeProfile (previously called ProfileMixin above) - View combining fields from the 4 entities above; custom service implementation for READ
     - Returns all records of status = "EXCEPTION"
     - Returns a single record when accessed by key, such as /employee/EmployeeProfile('15dae86b-1537-4d3d-a340-1d6ac4e4f5c7')
 
