@@ -26,7 +26,8 @@ In this mission, we enriched the original Calculate Employee Seniority use case 
 7. Significant additions to service implementation [emp-service.js](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/sfsf-mobile-appgyver/srv/emp-service.js) for the following:
     - Add exception criteria to calcSeniorityTotalDays for rehires where the previous termination event doesn't exist in SAP BTP persistence
     - Duplicate calcSeniorityTotalDays into calcSeniorityTotalDaysException for use in exception handling
-    - Event handler for READ of ProfileMixin view
+    - Event handler for READ of EmployeeProfile view
     - Event handler for UPDATE of Employee entity
+    - Event handlers for Photo and EmpEmployment entities, along with OData v2 proxy support
 
 You can customize the service implementation further to handle your own scenario. Thanks for trying out our work!
