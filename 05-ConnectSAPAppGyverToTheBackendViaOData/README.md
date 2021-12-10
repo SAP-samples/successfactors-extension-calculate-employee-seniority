@@ -35,7 +35,7 @@ In this section, we'll hook up the application to the CAP OData endpoints you de
 
     Note: You can ignore the errors related to the schema, and we will resolve the reference to ```repeated``` in the next step.
 
-1. Set the primary label to be a formula and enter the value ```repeated.current.fullName```
+1. Set the primary label to be a formula and enter the value ```repeated.current.defaultFullName```
 1. Finally, click the box to the left of **Repeat with** and select **Data and Variables** > **Data Variable**
 1. Set the value to **EmployeeProfile** and save.
 
@@ -59,7 +59,7 @@ In this section, we'll hook up the application to the CAP OData endpoints you de
 
     ```"data:image/jpeg;base64, " + REPLACE_ALL(REPLACE_ALL(REPLACE_ALL(data.EmployeeProfile1.photo, "\r\n", ""),"_", "/"), "-", "+")```
 
-1. Set the content of the the Full name field to a formula with the value ```data.EmployeeProfile1.fullName```
+1. Set the content of the the Full name field to a formula with the value ```data.EmployeeProfile1.defaultFullName```
 1. Set the content of the Headline field under Original Hire Date to ```SUBSTRING(data.Employee1.originalStartDate, 0, 10)```
 1. Set the content of the Headline field under Rehire Date to ```SUBSTRING(data.Employee1.hireDate, 0, 10)```
 1. Delete the content from the 2 headline components under Last Termination Date and Seniority Date. We will configure those to dynamically populate in the next section.
