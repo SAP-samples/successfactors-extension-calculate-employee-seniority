@@ -12,7 +12,7 @@ The remaining steps are similar to the ones covered in the main mission branch, 
   
 2. Choose your user as destination for the fork. 
 
-    <img src="./images/fork-repo-user.png" alt="Choose user for fork" width="250">
+    ![Fork repo for user](./images/fork-repo-user.png)
 
     You should now have the following repository: https://github.com/**YourUser**/successfactors-extension-calculate-employee-seniority 
 
@@ -20,13 +20,13 @@ The remaining steps are similar to the ones covered in the main mission branch, 
 
     ![Open Terminal](./images/dev-cap-app-5.png)
  
-4. In the opened terminal go to projects folder with executing
+1. In the opened terminal go to projects folder with executing
    
    ``` 
    cd projects
    ``` 
 
-5. Clone your forked sample GitHub repository for this mission. 
+2. Clone your forked sample GitHub repository for this mission. 
 
     ```
     git clone https://github.com/SAP-samples/YourUser/successfactors-extension-calculate-employee-seniority
@@ -34,7 +34,7 @@ The remaining steps are similar to the ones covered in the main mission branch, 
 
     > IMPORTANT: Replace **YourUser** with your actual username. 
 
-6. Checkout the ```sfsf-mobile-appgyver ``` branch
+3. Checkout the ```sfsf-mobile-appgyver ``` branch
    
      ```
     git checkout sfsf-mobile-appgyver
