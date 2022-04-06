@@ -65,7 +65,7 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
   ...
 ```
 
-9. Change the [payload URI](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/srv/emp-service.js#L72) in *emp-service.js* . It depends on the SF Instance.
+9. Change the [payload URI](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/srv/emp-service.js#L72) in *emp-service.js* . It depends on the SF Instance, so refer to the [following link for details](https://help.sap.com/viewer/28bc3c8e3f214ab487ec51b1b8709adc/2111/en-US/af2b8d5437494b12be88fe374eba75b6.html)
 
 
 
