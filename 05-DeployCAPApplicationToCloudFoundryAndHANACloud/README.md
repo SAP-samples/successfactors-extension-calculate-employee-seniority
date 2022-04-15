@@ -15,13 +15,20 @@ In this how to guide, you will deploy the CAP Application with all its bound ser
  
     - Follow the process by entering the credentials of your SAP BTP account and by selecting the Cloud Foundry org and space you want to deploy the application to.
 
-2. Build the Multi-Target Application Archive (MTA Archive) by executing the following command in the root directory of your project in the terminal:
+2. Install dependencies and update npm libraries
+
+    ```
+    npm install
+    npm update
+    ```
+    
+3. Build the Multi-Target Application Archive (MTA Archive) by executing the following command in the root directory of your project in the terminal:
 
     ```
     mbt build
     ```
 
-3. Deploy the application to SAP BTP, Cloud Foundry Runtime by executing the following command in the root directory of your project in the terminal:
+4. Deploy the application to SAP BTP, Cloud Foundry Runtime by executing the following command in the root directory of your project in the terminal:
 
     ```
     cf deploy mta_archives/seniority-calc_1.0.0.mtar
