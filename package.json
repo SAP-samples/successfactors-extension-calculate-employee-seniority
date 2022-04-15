@@ -57,6 +57,9 @@
       "uaa": {
         "kind": "xsuaa"
       },
+      "auth": { 
+        "kind": "dummy-auth" 
+      },
       "messaging": {
         "kind": "enterprise-messaging-shared",
         "[production]": {
