@@ -1,0 +1,61 @@
+
+GET http://localhost:4004/employee/Employee
+Content-Type: application/json
+
+##### POST
+
+POST http://localhost:4004/employee/Employee
+Content-Type: application/json
+
+{
+    "userId": "12377",
+    "hire_date": "2021-01-01",
+    "original_start_date": "2021-02-01",
+    "termination_date": null,
+    "status": "HIRENEW",
+    "seniority": null
+}
+
+
+##### PATCH
+
+PATCH http://localhost:4004/employee/Employee('49ac8ab2-be48-4084-8496-520b2c3e4884')
+Content-Type: application/json
+
+{
+    "userId": "101052",
+    "terminationDate": "2018-09-18T00:00:00.000Z",
+    "status": "REHREH"
+}
+
+
+##### POST
+
+POST http://localhost:4004/employee/Employee
+Content-Type: application/json
+
+{
+    "userId": "12377",
+    "hire_date": "2021-01-01",
+    "original_start_date": "2021-02-01",
+    "termination_date": "2021-03-01",
+    "status": "TEROTH",
+    "seniority": null
+}
+
+##### POST
+
+POST http://localhost:4004/employee/Employee
+Content-Type: application/json
+
+{
+    "userId": "12377",
+    "hire_date": "2021-04-01",
+    "original_start_date": "2021-05-01",
+    "termination_date": null,
+    "status": "REHREH",
+    "seniority": null
+}
+   
+
+## REHREH HIRENEW TEROTH

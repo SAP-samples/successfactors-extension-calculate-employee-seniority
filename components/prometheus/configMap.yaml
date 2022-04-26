@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-server-conf
+  labels:
+    name: prometheus-server-conf
+data:
+  prometheus.rules: |-
+    groups:
+    - name: capservice.requests.metrics.rules
+      rules:
+      # Alerting rule for EmEmployment service handler
+      - alert: HighLatencyRequest-EmpEmployment-Route
+        expr:  service_handler_request_latency_sum{route="/EmpEmployment"} / service_handler_request_latency_count{route="/EmpEmployment"} > 4000
+        for: 1s
+        labels:
+          severity: critical
+        annotations:
+          description: "HTTP request latency for route /EmpEmployment is higher than 4 seconds"
+          summary: "HTTP high request latency"
+      
+      # Alerting rule for Photo service handler
+      - alert: HighLatencyRequest-Photo-Route
+        expr:  service_handler_request_latency_sum{route="/Photo"} / service_handler_request_latency_count{route="/Photo"} > 5000
+        for: 1s
+        labels:
+          severity: critical
+        annotations:
+          description: "HTTP request latency for /Photo route is higher than 5 seconds"
+          summary: "HTTP high request latency."
+      
+      # Alerting rule for EmployeeProfile service handler
+      - alert: HighLatencyRequest-EmployeeProfile-Route
+        expr:  service_handler_request_latency_sum{route="/EmployeeProfile"} / service_handler_request_latency_count{route="/EmployeeProfile"} > 3700
+        for: 1s
+        labels:
+          severity: critical
+        annotations:
+          description: "HTTP request latency for /EmployeeProfile route is higher than 3.7 seconds"
+          summary: "HTTP high request latency."
+      
+      # Alerting rule for evaulating the number of requests made in last 1 minute
+      - alert: HighNumberOfRequests
+        expr:  increase(service_handlers_requests[1m]) / 60 > 1
+        for: 1s
+        labels:
+          severity: critical
+        annotations:
+          description: "More than 60 requests have been made to your service in last 1 minute"
+          summary: "High number of HTTP requests."
+
+  prometheus.yml: |-
+    global:
+      scrape_interval: 5s
+      evaluation_interval: 5s
+    rule_files:
+      - /etc/prometheus/prometheus.rules
+    alerting:
+      alertmanagers:
+      - scheme: http
+        static_configs:
+        - targets:
+          # alertmanager.<NAMESPACE>.svc:<PORT>
+          - "alertmanager.seniority-calculator.svc:9093"
+    scrape_configs:
+      - job_name: 'cap_service_monitor'
+        scrape_interval: 5s
+        static_configs:
+          - targets: 
+            # cluster service ip: cap service port
+            - <SENIORITY-CALCULTOR-SERVICE-CLUSTER-IP>:4004

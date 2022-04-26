@@ -1,0 +1,22 @@
+apiVersion: gateway.kyma-project.io/v1alpha1
+kind: APIRule
+metadata:
+  name: prometheus-server-service
+  labels:
+    app.kubernetes.io/name: prometheus-server-service
+spec:
+  service:
+    host: prometheus-server-service.<CLUSTER-NAME>.kyma.shoot.live.k8s-hana.ondemand.com
+    name: prometheus-server
+    port: 8080
+  gateway: kyma-gateway.kyma-system.svc.cluster.local
+  rules:
+    - accessStrategies:
+        - config: {}
+          handler: noop
+      methods:
+        - GET
+        - POST
+        - PUT
+        - PATCH
+      path: /.*

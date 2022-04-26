@@ -1,0 +1,23 @@
+apiVersion: gateway.kyma-project.io/v1alpha1
+kind: APIRule
+metadata:
+  name: alertmanager-service
+  labels:
+    app.kubernetes.io/name: alertmanager-service
+spec:
+  service:
+    host: alertmanager-service.<CLUSTER-NAME>.kyma.shoot.live.k8s-hana.ondemand.com
+    name: alertmanager
+    port: 9093
+  gateway: kyma-gateway.kyma-system.svc.cluster.local
+  rules:
+    - accessStrategies:
+        - config: {}
+          handler: noop
+      methods:
+        - GET
+        - POST
+        - PUT
+        - PATCH
+        - HEAD
+      path: /.*

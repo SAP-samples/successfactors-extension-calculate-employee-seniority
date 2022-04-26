@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seniority-calculator-service 
+  labels:
+    app: seniority-calculator-service
+    example: monitoring-custom-metrics
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seniority-calculator-service
+  template:
+    metadata:
+      labels: # labels to select/identify the deployment
+        app: seniority-calculator-service  
+        example: monitoring-custom-metrics
+      annotations:
+        traffic.sidecar.istio.io/includeInboundPorts: "4004" 
+    spec:               
+      containers: 
+        # Please replace your account username and name of the image pushed to docker hub
+        - image: docker.io/<USERNAME>/<IMAGENAME:TAG> 
+          name: seniority-calculator-service
+          volumeMounts:
+            - name: destination-volume
+              mountPath: /etc/secrets/sapcp/destination/kymadest
+              readOnly: true
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 4004
+          env:
+            - name: DEBUG
+              value: "y"
+          envFrom:
+            - prefix: cds_requires_db_credentials_
+              secretRef:
+                name: seniority-calc-db-secret
+            - prefix: cds_requires_messaging_credentials_
+              secretRef:
+                name: jovial-blackwell
+            - prefix: cds_requires_uaa_credentials_
+              secretRef:
+                name: admiring-franklin
+            - prefix: cds_requires_sfsf_credentials_
+              secretRef:
+                name: distracted-stonebraker
+            - prefix: cds_requires_PhotoUser_credentials_
+              secretRef:
+                name: distracted-stonebraker
+      volumes:
+        - name: destination-volume
+          secret:
+            secretName: charming-knuth

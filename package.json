@@ -1,0 +1,97 @@
+{
+  "name": "seniority-calc-appgyver",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^5.6.3",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.8.1",
+    "@sap/hana-client": "^2.10.15",
+    "@sap/xb-msg-amqp-v100": "^0.9.56",
+    "@sap/xssec": "^3.2.10",
+    "cors": "^2.8.5",
+    "express": "^4",
+    "hdb": "^0.18.3",
+    "openssl": "^2.0.0",
+    "passport": "^0.4.1",
+    "sqlite3": "^5.0.2",
+    "prom-client": "^14.0.1"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "devDependencies": {
+    "@sap/hdi-deploy": "^4.2.3"
+  },
+  "scripts": {
+    "start": "cds run"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2020": true,
+      "node": true,
+      "jest": true,
+      "mocha": true
+    },
+    "globals": {
+      "SELECT": true,
+      "INSERT": true,
+      "UPDATE": true,
+      "DELETE": true,
+      "CREATE": true,
+      "DROP": true,
+      "CDL": true,
+      "CQL": true,
+      "CXL": true,
+      "cds": true
+    },
+    "rules": {
+      "no-console": "off",
+      "require-atomic-updates": "off"
+    }
+  },
+  "cds": {
+    "features": {
+      "[production]": {
+        "emulate_vcap_services": true
+      }
+    },
+    "requires": {
+      "db": {
+        "kind": "sql"
+      },
+      "uaa": {
+        "kind": "xsuaa"
+      },
+      "messaging": {
+        "kind": "enterprise-messaging-shared",
+        "[production]": {
+          "kind": "enterprise-messaging-shared"
+        }
+      },
+      "sfsf": {
+        "kind": "odata",
+        "credentials": {
+          "destination": "seniority-calc-sfsf-service",
+          "path": "/odata/v2",
+          "requestTimeout": 1000000
+        }
+      },
+      "PhotoUser": {
+        "kind": "odata-v2",
+        "model": "srv/external/PhotoUser",
+        "credentials": {
+          "destination": "seniority-calc-sfsf-service",
+          "path": "/odata/v2",
+          "requestTimeout": 1000000
+        }
+      }
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    }
+  }
+}

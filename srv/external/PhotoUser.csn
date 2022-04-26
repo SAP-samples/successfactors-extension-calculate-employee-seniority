@@ -1,0 +1,694 @@
+{
+  "meta": {
+    "creator": "cds-dk 4.5.4"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "PhotoUser": {
+      "kind": "service",
+      "@cds.external": true
+    },
+    "PhotoUser.Photo": {
+      "kind": "entity",
+      "elements": {
+        "photoType": {
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "userId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "height": {
+          "type": "cds.Integer"
+        },
+        "lastModified": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "mimeType": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "personUUID": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "photo": {
+          "type": "cds.LargeBinary"
+        },
+        "photoHash": {
+          "type": "cds.String",
+          "length": 64
+        },
+        "photoId": {
+          "type": "cds.Integer64"
+        },
+        "photoName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "width": {
+          "type": "cds.Integer"
+        },
+        "userNav": {
+          "doc": "Please add an ON condition",
+          "type": "cds.Association",
+          "target": "PhotoUser.User",
+          "on": [{ "ref": ["userNav", "userId"] }, "=", { "ref": ["$self", "userId"] } ]
+        }
+      }
+    },
+    "PhotoUser.User": {
+      "kind": "entity",
+      "elements": {
+        "userId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "addressLine1": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "addressLine2": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "addressLine3": {
+          "type": "cds.LargeString"
+        },
+        "benchStrength": {
+          "type": "cds.LargeString"
+        },
+        "bonusBudgetAmount": {
+          "type": "cds.Double"
+        },
+        "bonusTarget": {
+          "type": "cds.Double"
+        },
+        "businessPhone": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "businessSegment": {
+          "type": "cds.LargeString"
+        },
+        "cellPhone": {
+          "type": "cds.LargeString"
+        },
+        "citizenship": {
+          "type": "cds.LargeString"
+        },
+        "city": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "companyExitDate": {
+          "type": "cds.Date"
+        },
+        "compensationBonusEligible": {
+          "type": "cds.Boolean"
+        },
+        "compensationEligible": {
+          "type": "cds.Boolean"
+        },
+        "compensationReadOnly": {
+          "type": "cds.Boolean"
+        },
+        "compensationSalaryEligible": {
+          "type": "cds.Boolean"
+        },
+        "compensationSalaryRateType": {
+          "type": "cds.LargeString"
+        },
+        "compensationSalaryRateUnits": {
+          "type": "cds.Integer64"
+        },
+        "compensationStockEligible": {
+          "type": "cds.Boolean"
+        },
+        "competency": {
+          "type": "cds.DecimalFloat"
+        },
+        "country": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "criticalTalentComments": {
+          "type": "cds.LargeString"
+        },
+        "custom01": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom02": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom03": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom04": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom05": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom06": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom07": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom08": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom09": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom10": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom11": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom12": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom13": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom14": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "custom15": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "dateOfBirth": {
+          "type": "cds.Date"
+        },
+        "dateOfCurrentPosition": {
+          "type": "cds.Date"
+        },
+        "dateOfPosition": {
+          "type": "cds.Date"
+        },
+        "defaultFullName": {
+          "type": "cds.LargeString"
+        },
+        "defaultLocale": {
+          "type": "cds.String",
+          "length": 32
+        },
+        "department": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "division": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "email": {
+          "type": "cds.LargeString"
+        },
+        "empId": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "employeeClass": {
+          "type": "cds.LargeString"
+        },
+        "ethnicity": {
+          "type": "cds.LargeString"
+        },
+        "fax": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "finalJobCode": {
+          "type": "cds.LargeString"
+        },
+        "finalJobFamily": {
+          "type": "cds.LargeString"
+        },
+        "finalJobRole": {
+          "type": "cds.LargeString"
+        },
+        "firstName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "futureLeader": {
+          "type": "cds.Boolean"
+        },
+        "gender": {
+          "type": "cds.String",
+          "length": 2
+        },
+        "hireDate": {
+          "type": "cds.Date"
+        },
+        "homePhone": {
+          "type": "cds.LargeString"
+        },
+        "impactOfLoss": {
+          "type": "cds.LargeString"
+        },
+        "impactOfLossComments": {
+          "type": "cds.LargeString"
+        },
+        "issueComments": {
+          "type": "cds.LargeString"
+        },
+        "jobCode": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "jobFamily": {
+          "type": "cds.LargeString"
+        },
+        "jobLevel": {
+          "type": "cds.LargeString"
+        },
+        "jobRole": {
+          "type": "cds.LargeString"
+        },
+        "jobTitle": {
+          "type": "cds.LargeString"
+        },
+        "keyPosition": {
+          "type": "cds.Boolean"
+        },
+        "lastModified": {
+          "type": "cds.Date"
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedWithTZ": {
+          "type": "cds.Timestamp"
+        },
+        "lastName": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "lastReviewDate": {
+          "type": "cds.LargeString"
+        },
+        "level": {
+          "type": "cds.LargeString"
+        },
+        "localCurrencyCode": {
+          "type": "cds.LargeString"
+        },
+        "location": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "lumpsum2Target": {
+          "type": "cds.Double"
+        },
+        "lumpsumTarget": {
+          "type": "cds.Double"
+        },
+        "married": {
+          "type": "cds.Boolean"
+        },
+        "matrix1Label": {
+          "type": "cds.LargeString"
+        },
+        "matrix2Label": {
+          "type": "cds.LargeString"
+        },
+        "matrixManaged": {
+          "type": "cds.Boolean"
+        },
+        "meritEffectiveDate": {
+          "type": "cds.Date"
+        },
+        "meritTarget": {
+          "type": "cds.Date"
+        },
+        "mi": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "minority": {
+          "type": "cds.Boolean"
+        },
+        "nationality": {
+          "type": "cds.LargeString"
+        },
+        "newToPosition": {
+          "type": "cds.Boolean"
+        },
+        "nickname": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "objective": {
+          "type": "cds.DecimalFloat"
+        },
+        "onboardingId": {
+          "type": "cds.LargeString"
+        },
+        "origHireDate": {
+          "type": "cds.Date"
+        },
+        "password": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "payGrade": {
+          "type": "cds.LargeString"
+        },
+        "performance": {
+          "type": "cds.DecimalFloat"
+        },
+        "potential": {
+          "type": "cds.DecimalFloat"
+        },
+        "promotionAmount": {
+          "type": "cds.Double"
+        },
+        "raiseProrating": {
+          "type": "cds.Double"
+        },
+        "reasonForLeaving": {
+          "type": "cds.LargeString"
+        },
+        "reloComments": {
+          "type": "cds.LargeString"
+        },
+        "reloLocation": {
+          "type": "cds.LargeString"
+        },
+        "reloWilling": {
+          "type": "cds.LargeString"
+        },
+        "reviewFreq": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "riskOfLoss": {
+          "type": "cds.LargeString"
+        },
+        "salary": {
+          "type": "cds.Double"
+        },
+        "salaryBudgetExtra2Percentage": {
+          "type": "cds.Double"
+        },
+        "salaryBudgetExtraPercentage": {
+          "type": "cds.Double"
+        },
+        "salaryBudgetFinalSalaryPercentage": {
+          "type": "cds.Double"
+        },
+        "salaryBudgetLumpsumPercentage": {
+          "type": "cds.Double"
+        },
+        "salaryBudgetMeritPercentage": {
+          "type": "cds.Double"
+        },
+        "salaryBudgetPromotionPercentage": {
+          "type": "cds.Double"
+        },
+        "salaryBudgetTotalRaisePercentage": {
+          "type": "cds.Double"
+        },
+        "salaryLocal": {
+          "type": "cds.Double"
+        },
+        "salaryProrating": {
+          "type": "cds.Double"
+        },
+        "salutation": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "sciLastModified": {
+          "type": "cds.Timestamp"
+        },
+        "seatingChart": {
+          "type": "cds.LargeString"
+        },
+        "serviceDate": {
+          "type": "cds.Date"
+        },
+        "ssn": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "state": {
+          "type": "cds.String",
+          "length": 20
+        },
+        "status": {
+          "type": "cds.String",
+          "length": 17
+        },
+        "stockBudgetOptionAmount": {
+          "type": "cds.Double"
+        },
+        "stockBudgetOther1Amount": {
+          "type": "cds.Double"
+        },
+        "stockBudgetOther2Amount": {
+          "type": "cds.Double"
+        },
+        "stockBudgetOther3Amount": {
+          "type": "cds.Double"
+        },
+        "stockBudgetStockAmount": {
+          "type": "cds.Double"
+        },
+        "stockBudgetUnitAmount": {
+          "type": "cds.Double"
+        },
+        "suffix": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "sysCostOfSource": {
+          "type": "cds.DecimalFloat"
+        },
+        "sysSource": {
+          "type": "cds.Integer"
+        },
+        "sysStartingSalary": {
+          "type": "cds.DecimalFloat"
+        },
+        "teamMembersSize": {
+          "type": "cds.Integer"
+        },
+        "timeZone": {
+          "type": "cds.String",
+          "length": 16
+        },
+        "title": {
+          "type": "cds.String",
+          "length": 255
+        },
+        "totalTeamSize": {
+          "type": "cds.Integer64"
+        },
+        "username": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "veteranDisabled": {
+          "type": "cds.Boolean"
+        },
+        "veteranMedal": {
+          "type": "cds.Boolean"
+        },
+        "veteranProtected": {
+          "type": "cds.Boolean"
+        },
+        "veteranSeparated": {
+          "type": "cds.Boolean"
+        },
+        "zipCode": {
+          "type": "cds.String",
+          "length": 10
+        }
+      }
+    },
+    "PhotoUser.EmpEmployment": {
+      "kind": "entity",
+      "elements": {
+        "personIdExternal": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "userId": {
+          "key": true,
+          "type": "cds.String",
+          "length": 100
+        },
+        "StockEndDate": {
+          "type": "cds.Date"
+        },
+        "assignmentClass": {
+          "type": "cds.String",
+          "length": 128
+        },
+        "assignmentIdExternal": {
+          "type": "cds.LargeString"
+        },
+        "benefitsEligibilityStartDate": {
+          "type": "cds.Date"
+        },
+        "benefitsEndDate": {
+          "type": "cds.Date"
+        },
+        "bonusPayExpirationDate": {
+          "type": "cds.Date"
+        },
+        "createdBy": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "createdDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "createdOn": {
+          "type": "cds.Date"
+        },
+        "customDate1": {
+          "type": "cds.Date"
+        },
+        "customString1": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "customString2": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "customString3": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "customString4": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "eligibleForSalContinuation": {
+          "type": "cds.Boolean"
+        },
+        "eligibleForStock": {
+          "type": "cds.Boolean"
+        },
+        "employeeFirstEmployment": {
+          "type": "cds.Boolean"
+        },
+        "endDate": {
+          "type": "cds.Date"
+        },
+        "firstDateWorked": {
+          "type": "cds.Date"
+        },
+        "hiringNotCompleted": {
+          "type": "cds.Boolean"
+        },
+        "includeAllRecords": {
+          "type": "cds.Boolean"
+        },
+        "initialOptionGrant": {
+          "type": "cds.Double"
+        },
+        "initialStockGrant": {
+          "type": "cds.Double"
+        },
+        "isContingentWorker": {
+          "type": "cds.Boolean"
+        },
+        "isECRecord": {
+          "type": "cds.Boolean"
+        },
+        "jobNumber": {
+          "type": "cds.Integer64"
+        },
+        "lastDateWorked": {
+          "type": "cds.Date"
+        },
+        "lastModifiedBy": {
+          "type": "cds.String",
+          "length": 100
+        },
+        "lastModifiedDateTime": {
+          "type": "cds.Timestamp"
+        },
+        "lastModifiedOn": {
+          "type": "cds.Date"
+        },
+        "okToRehire": {
+          "type": "cds.Boolean"
+        },
+        "originalStartDate": {
+          "type": "cds.Date"
+        },
+        "payrollEndDate": {
+          "type": "cds.Date"
+        },
+        "prevEmployeeId": {
+          "type": "cds.String",
+          "length": 256
+        },
+        "professionalServiceDate": {
+          "type": "cds.Date"
+        },
+        "regretTermination": {
+          "type": "cds.Boolean"
+        },
+        "salaryEndDate": {
+          "type": "cds.Date"
+        },
+        "seniorityDate": {
+          "type": "cds.Date"
+        },
+        "serviceDate": {
+          "type": "cds.Date"
+        },
+        "startDate": {
+          "type": "cds.Date"
+        },
+        "photoNav": {
+          "doc": "Please add  an ON condition",
+          "type": "cds.Association",
+          "target": "PhotoUser.Photo",
+          "on": [{ "ref": ["photoNav", "userId"] }, "=", { "ref": ["$self", "userId"] } ]
+        },
+        "userNav": {
+          "doc": "Please add an ON condition",
+          "type": "cds.Association",
+          "target": "PhotoUser.User",
+          "on": [{ "ref": ["userNav", "userId"] }, "=", { "ref": ["$self", "userId"] } ]
+        }
+      }
+    }
+  }
+}
