@@ -9,8 +9,8 @@ module.exports = async srv => {
         console.log("<< create event caught", msg);
 
         
-        let employee = msg.headers
-        let id = msg.headers.userId
+        let employee = msg.data
+        let id = msg.data.userId
 
         let { years, months, days, totalDays } = await calcSeniorityTotalDays(employee)
 
