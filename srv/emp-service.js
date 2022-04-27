@@ -10,7 +10,7 @@ module.exports = async srv => {
 
         
         let employee = msg.data
-        let id = msg.data.userId
+        let id = employee.userId
 
         let { years, months, days, totalDays } = await calcSeniorityTotalDays(employee)
 
