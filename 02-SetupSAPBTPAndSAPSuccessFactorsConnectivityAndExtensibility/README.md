@@ -17,21 +17,29 @@ To connect to a SAP SuccessFactors system we first have to register it on the SA
 
      ![Register SFSF System](./images/btp-2.png)
 
-  1. Go to your SAP SuccessFactors Provisioning Tool Home Page. Select your company.
+## Add generated token to SAP SuccessFactors System
 
-     ![Register SFSF System](./images/sf-1.png)
+  1. Go to your SAP SuccessFactors Admin Center
 
-     * Note that provisioning is only available for SAP employees and partners. Customers should raise an incident against the **LOD-SF-PLT** component requesting support for this step.
+     ![SAP SuccessFactors Admin Center](./images/sf-5.png)
 
-  1. In the Edit Company Settings click on Extension Management Configuration
+  2. In order to create Integration with SAP BTP, a permission from the *Manage Extensions on SAP BTP* category is required. In Admin Center search for *Manage Permission Roles*, open it and cretae new permission role.
 
-     ![Register SFSF System](./images/sf-2.png)
+     ![Manage Permission Roles](./images/sf-6.png)
 
-  1. In the Add New Integration section insert the token from your SAP Business Technology Platform account and click on add
+  3. Give a Role name, e.g. "Manage Extensions on SAP BTP" and add the permission **Create Integration with SAP BTP** from category **Manage Extensions on SAP BTP** 
 
-     ![Register SFSF System](./images/sf-3.png)
+     ![Add the permission](./images/sf-7.png)
+   
+  4. Grant this role to a Permission Group, e.g. "Admin"
 
-  1. At your SAP Business Technology Platform account the system should now have the status "Registered"
+     ![Grant the permission to a group](./images/sf-8.png)
+
+  5. Now search in Admin Center *"Extension Center"* and open it. Here you can add the *Integration Token* noted from one of the first steps which was generated in SAP BTP.
+
+     ![Add Integration Token](./images/sf-9.png)
+
+  5. At your SAP Business Technology Platform account the system should now have the status "Registered"
 
      ![Register SFSF System](./images/btp-4.png)
 
