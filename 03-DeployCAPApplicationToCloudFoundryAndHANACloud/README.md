@@ -3,7 +3,7 @@
 Follow the instructions for the [original mission](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/tree/mission/05-DeployCAPApplicationToCloudFoundryAndHANACloud) but note that the application id for this mission is ```seniority-calc-appgyver```
 
   - If you previously deployed the ```seniority-calc-srv``` application from the main mission branch, you should stop it before proceeding. You can do this from the applications section of your Cloud Foundry space
-  - As a final step before you access the entities, add a sample exception record so EmployeeProfile returns some data. You can use the POST request in [request.http](../../fsf-mobile-appgyver/srv/request.http#L7) in conjunction with ```cds watch``` from SAP Business Application Studio
+  - As a final step before you access the entities, add a sample exception record so EmployeeProfile returns some data. You can use the POST request in [request.http](../../sfsf-mobile-appgyver/srv/request.http#L7) in conjunction with ```cds watch``` from SAP Business Application Studio
 
 ### Explanation of services
 
