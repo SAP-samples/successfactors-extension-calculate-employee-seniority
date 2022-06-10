@@ -41,7 +41,7 @@ This first page contains an image list that we will eventually connect to a remo
 
       ![Header complete](./images/11headercomplete.png)
 
-1. Optionally, implement a search bar using this [excellent reference](https://docs.appgyver.com/appgyver-academy/tutorials/power-ups/power-up-search-bar-with-sugggestions)
+1. Optionally, implement a search bar using this [excellent reference]([https://docs.appgyver.com/appgyver-academy/tutorials/power-ups/power-up-search-bar-with-sugggestions](https://www.youtube.com/watch?v=lEH6K6Bw_2U))
 
 1. Add an image list component to hold the core data from SAP SuccessFactors. Set the Top margin to 10px, the width to 90%, and Center align self
     - The image list is a custom component comprised of 4 cells, an embedded image component, and some texts. Custom components can be edited by double-clicking them from the canvas
