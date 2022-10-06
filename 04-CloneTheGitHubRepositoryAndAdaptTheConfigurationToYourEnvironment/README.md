@@ -6,7 +6,11 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
 
     ![Fork Repo](./images/fork-repo.png)
 
-  > the screenshot was created when the repository was still private. that's why the fork button appears to be disabled. 
+    > the screenshot was created when the repository was still private. that's why the fork button appears to be disabled.
+
+    > **Important:**
+    When forking, uncheck the checkbox that says 'copy the main branch only' (see below), to make sure you also have the content of the AppGyver Branches ***(these e.g. contain the complete code for the end-to-end scenario)***
+    ![Fork Repo not only main branch](./images/fork-repo-not-only-main-branch.png)
 
 2. Choose your user as destination for the fork. 
 
