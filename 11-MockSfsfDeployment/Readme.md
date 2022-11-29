@@ -11,18 +11,20 @@
 ## Testing the Mock SuccessFactors application along with SAP Appgyver ##
 
 1. There are 10 mock users that are setup to test the mock scenario. user ids are 
-|userId | userName|
----|---
-|00001 | Zimbelman Miller|
-|00002|Youard Mitchell|
-|00003|Youngblood Haugen|
-|00004|Zerbe Clarke|
-|00005|Zobel Walker|
-|00006|Zimble Magnusson|
-|00007|Zorn Watson|
-|00008|Yerkes Eriksson|
-|00009|Zacherl Jensen|
-|00010|Yandell Hansen|
+
+| userId | userName         |
+|--------|------------------|
+| 00001  | Zimbelman Miller | 
+| 00002  | Youard Mitchell  |
+| 00003  | Youngblood Haugen|
+| 00004  | Zerbe Clarke     |
+| 00005  | Zobel Walker     |
+| 00006  | Zimble Magnusson |
+| 00007  | Zorn Watson      |
+| 00008  | Yerkes Eriksson  |
+| 00009  | Zacherl Jensen   |
+| 00010  | Yandell Hansen   |
+
 
 2. To test the users find the request.http file present at ```https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/sfsf-mobile-appgyver/srv/request.http```
 
