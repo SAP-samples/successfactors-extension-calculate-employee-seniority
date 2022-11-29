@@ -7,6 +7,16 @@
 4. open terminal and build the project using ``` mbt build```
 5. Deploy the application to subaccount using ```cf deploy mta_archives/mock-successfactors_1.0.0.mtar ```
 6. This should successfully deploy the application. Please note down the application url.
+7. Create a destination with name and details as below in SAP BTP cockpit.
+
+| Field | Value         |
+|--------|------------------|
+| Name  | seniority-calc-sfsf-service | 
+| Type  | HTTP  |
+| Description  | Destination to connect to mock service. |
+| URL  | url from Step 6    |
+| Proxy Type  | Internet     |
+| Authentication  | NoAuthentication |
 
 ## Testing the Mock SuccessFactors application along with SAP Appgyver ##
 
