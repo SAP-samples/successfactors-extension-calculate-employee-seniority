@@ -32,7 +32,7 @@
 ![mock-sfsf2](./images/mocksfsf2.png)
 4. change the @mockSfsfBtpEndPoint( application url noted after deploying the application it should be in the format **application url**/odata/v2) and @username (options from step 1).
 
-5. Not Send both POST request and PATCH request. this should create a user with exception that is showcased in SAP Appgyver application.
+5. Now Send both POST request and PATCH request. this should create a user with exception that is showcased in SAP Appgyver application.
 
 6. Now Log into Appgyver application to follow the normal testing. this should update the custom fields in Mock SuccessFactors Application.
 
