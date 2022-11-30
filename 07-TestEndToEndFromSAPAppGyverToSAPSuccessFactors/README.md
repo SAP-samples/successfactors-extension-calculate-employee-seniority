@@ -4,6 +4,22 @@ In this step, we will execute a rehire in SAP SuccessFactors using the sample Be
 
 The HR business partner will see the exception surfaced in the SAP AppGyver application, remediate it with info from Employee Central, and the updated record is ultimately written back, with the seniority custom fields fully populated.
 
+> Note: if a real SAP Successfactors system is utilized then continue with Step [Rehire employee in SAP SuccessFactors](#rehire-employee-in-sap-successfactors). If a mock service is utilized then  follow Step [Rehire employee in Mock service](#rehire-employee-in-mock-service)
+
+### Rehire employee in Mock service
+The following section shows you how to interactively rehire an employee so that it triggers an intelligent service center job and can be worked with in the mobile app.
+
+1. Open the request.http file present in srv folder of the seniority-calculator application as shown below     
+![mocksfsf1](./images/mocksfsf1.png)
+
+2. Update the <code>mockSfsfBtpEndpoint</code> and <code>username</code> as requires.
+>Note: Users ranging from 00001-00010 are already setup for ease of testing
+
+3. Please send both POST request and PATCH request by changing the necessary values.
+>Note: Status should be "REHREH" in the POST request.
+
+This should create and employee with status "EXCEPTION" that will be updated in SAP Appgyver UI.
+
 ### Rehire employee in SAP SuccessFactors
 
 There are a number of inactive employees in the BestRun company data, but most of them have been marked as not ok to rehire. The following section shows you how to interactively rehire an employee so that it triggers an intelligent service center job and can be worked with in the mobile app. If you don't have an SAP SuccessFactors tenant, you can utilize the requests in the request.http file in the repo to simulate all events.
@@ -78,5 +94,8 @@ Now that the exception record has been created, we can remediate it in SAP AppGy
 1. Finally, refreshing the employment details in SAP SuccessFactors shows the custom seniority fields have been populated
 
     ![Seniority fields](./images/14ecdetails.png)
+
+If a mock service is utilized. Please trigger the GET request present in request.http folder which should showcase the updated fields as below.    
+![mocksfsf](./images/mocksfsf2.png)
 
 Congratulations on completing the end to end test of this use case!
