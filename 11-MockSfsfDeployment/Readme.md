@@ -1,27 +1,27 @@
 # Deploy Mock service to Cloud Foundry
-Please skip this step if real SAP SuccessFactors is utilized continue with [Next Step](#deploy-cap-service-to-cloud-foundry-and-hana-cloud) . If, you don't have a real SAP SuccessFactors then please utilize the mock service provided.
-Please follow below steps to deploy the mock service application.
+Please skip this step if real SAP SuccessFactors is utilized continue with [Next Step](#deploy-cap-service-to-cloud-foundry-and-hana-cloud) . If, you don't have a real SAP SuccessFactors then  utilize the mock service provided.
+Follow the steps to deploy mock service.
 #### Deploy mtar file
 1. Download the .mtar file from [Mock Successfactors Mtar file]()
 2. Login to SAP Business Application studio and open an Empty folder.
-![Mock-sfsf](./images/mocksfsf1.png)
+    ![Mock-sfsf](./images/mocksfsf1.png)
 3. Drag and Drop the Downloaded mtar file into the workspace.
-![Mock-sfsf](./images/mocksfsf2.png)
+  ![Mock-sfsf](./images/mocksfsf2.png)
 4. Please get the cloud foundry api endpoint from SAP BTP cockpit.
-![Mock-sfsf](./images/mocksfsf3.png)
+  ![Mock-sfsf](./images/mocksfsf3.png)
 5. Open terminal and login using below command
         ```cf login -a <API Endpoint>```
 6. Deploy the **mock-successfactors_1.0.0.mtar** file using command
     ```cf deploy mock-successfactors_1.0.0.mtar```
 7. This should successfully deploy the application.
-8. After deploying a user provided variable is created in SAP BTP cockpit as shown below
+8. A user provided variable is created in SAP BTP cockpit as shown below after succesfull deployment.
 ![Mock-sfsf](./images/mocksfsf4.png)
 9. Please Edit the messagingurl according to your need and restart the application.
 #### Creating a destination in SAP BTP cockpit
 1. Login to SAP BTP cockpit and navigate to **connectivity > destination** in the navigation pane.
-![Mock-sfsf](./images/mocksfsf5.png)
+  ![Mock-sfsf](./images/mocksfsf5.png)
 2. Click on New Destination.
-![Mock-sfsf](./images/mocksfsf6.png)
+  ![Mock-sfsf](./images/mocksfsf6.png)
 3. Complete the Destination with below values
 
     | Field | Value         |
