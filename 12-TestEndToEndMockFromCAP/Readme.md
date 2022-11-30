@@ -6,7 +6,7 @@ The same process works for an employee whose employment is terminated, as well a
 
 ## Hiring a new employee
 
-1. Open the request.http file present in srv folder of Application
+1. Open the request.http file present in srv folder of Application.  
 ![mocksfsf](./images/mocksfsf1.png)
 
 2. Send Post request After editing the <code>mockSfsfBtpEndpoint</code> and <code>username</code>. 
@@ -14,14 +14,14 @@ The same process works for an employee whose employment is terminated, as well a
 
   > Note: Status should be "HIRENEW" for new Hires and "REHREH" for Rehire.
 
-Response should be as below:
+Response should be as below:  
 ![mocksfsf2](./images/mocksfsf2.png)
 
-3. After successfully sending the POST request, seniority calculator application updates the EmpEmployment Entity with seniority details. To check the ouput utilize the GET request as shown below.
+3. After successfully sending the POST request, seniority calculator application updates the EmpEmployment Entity with seniority details. To check the ouput utilize the GET request as shown below.   
 
 ![mocksfsf3](./images/mocksfsf3.png)
 
-4. After successfully sending the GET request the response should showcase the updated entity with Seniority calculations as below.
+4. After successfully sending the GET request the response should showcase the updated entity with Seniority calculations as below.    
   ![mocksfsf3](./images/mocksfsf4.png)
 
 If you reached this point then the mock application and seniority calculator application are setup and tested successfully.

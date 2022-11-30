@@ -3,24 +3,24 @@ Please skip this step if real SAP SuccessFactors is utilized continue with [Next
 Follow the steps to deploy mock service.
 #### Deploy mtar file
 1. Download the .mtar file from [Mock Successfactors Mtar file]()
-2. Login to SAP Business Application studio and open an Empty folder.
+2. Login to SAP Business Application studio and open an Empty folder. 
     ![Mock-sfsf](./images/mocksfsf1.png)
-3. Drag and Drop the Downloaded mtar file into the workspace.
+3. Drag and Drop the Downloaded mtar file into the workspace.  
   ![Mock-sfsf](./images/mocksfsf2.png)
-4. Please get the cloud foundry api endpoint from SAP BTP cockpit.
+4. Please get the cloud foundry api endpoint from SAP BTP cockpit.  
   ![Mock-sfsf](./images/mocksfsf3.png)
 5. Open terminal and login using below command
         ```cf login -a <API Endpoint>```
 6. Deploy the **mock-successfactors_1.0.0.mtar** file using command
     ```cf deploy mock-successfactors_1.0.0.mtar```
 7. This should successfully deploy the application.
-8. A user provided variable is created in SAP BTP cockpit as shown below after succesfull deployment.
+8. A user provided variable is created in SAP BTP cockpit as shown below after succesfull deployment.  
 ![Mock-sfsf](./images/mocksfsf4.png)
 9. Please Edit the messagingurl according to your need and restart the application.
 #### Creating a destination in SAP BTP cockpit
-1. Login to SAP BTP cockpit and navigate to **connectivity > destination** in the navigation pane.
+1. Login to SAP BTP cockpit and navigate to **connectivity > destination** in the navigation pane.  
   ![Mock-sfsf](./images/mocksfsf5.png)
-2. Click on New Destination.
+2. Click on New Destination.  
   ![Mock-sfsf](./images/mocksfsf6.png)
 3. Complete the Destination with below values
 
@@ -41,13 +41,13 @@ In this how to guide, you will deploy the CAP Application with all its bound ser
 
 1. Logon to the SAP BTP, Cloud Foundry Runtime. 
 
-    - Click on **View > Find Command** in the menu on the top.
+    - Click on **View > Find Command** in the menu on the top.  
    
       ![Find Command](./images/bas-0.png)
-    - Search for **Login to Cloud Foundry** and press **Enter** to confirm.
+    - Search for **Login to Cloud Foundry** and press **Enter** to confirm.  
       ![Login to Cloud Foundry](./images/bas-1.png)
 
-    - Copy & Paste the API Endpoint of your subaccount from the SAP BTP Cockpit. 
+    - Copy & Paste the API Endpoint of your subaccount from the SAP BTP Cockpit.   
       ![Login to Cloud Foundry](./images/bas-2.png)
  
     - Follow the process by entering the credentials of your SAP BTP account and by selecting the Cloud Foundry org and space you want to deploy the application to.
@@ -59,9 +59,9 @@ In this how to guide, you will deploy the CAP Application with all its bound ser
     npm update
     ```
     
-3. Mock service is used insted of Real SAP Successfactors so please remove the **sap-successfactors-extensibility** service specified in mta.yaml of Application. 
-![Login to Cloud Foundry](./images/mocksfsf7.png)
-![Login to Cloud Foundry](./images/mocksfsf8.png)
+3. Mock service is used insted of Real SAP Successfactors so please remove the **sap-successfactors-extensibility** service specified in mta.yaml of Application.   
+![Login to Cloud Foundry](./images/mocksfsf7.png)  
+![Login to Cloud Foundry](./images/mocksfsf8.png)  
 
     Build the Multi-Target Application Archive (MTA Archive) by executing the following command in the root directory of your project in the terminal:
 
