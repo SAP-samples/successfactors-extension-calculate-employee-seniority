@@ -18,7 +18,7 @@ The following section shows you how to interactively rehire an employee so that 
 3. Please send both POST request and PATCH request by changing the necessary values.
 >Note: Status should be "REHREH" in the POST request.
 
-This should create and employee with status "EXCEPTION" that will be updated in SAP Appgyver UI.
+This should create and employee with status "EXCEPTION" that will be updated in SAP Appgyver UI. Skip to step [Check the Event Message in SAP BTP Cockpit](#check-the-event-message-in-sap-btp-cockpit)
 
 ### Rehire employee in SAP SuccessFactors
 
