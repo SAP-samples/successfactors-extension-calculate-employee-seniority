@@ -1,49 +1,93 @@
-## Deploying Mock SuccessFactors Application ##
-1. Logon to SAP Business Application Studion from SAP BTP.
-2. Clone from github repository
-```cd projects && git clone https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority.git -b mock-sfsf```
-![clone-repo](./images/mocksfsf1.png)
-3. open the projects folder.
-4. open terminal and build the project using ``` mbt build```
-5. Deploy the application to subaccount using ```cf deploy mta_archives/mock-successfactors_1.0.0.mtar ```
-6. This should successfully deploy the application. Please note down the application url.
-7. Create a destination with name and details as below in SAP BTP cockpit.
+# Deploy Mock service to Cloud Foundry
+Please skip this step if real SAP SuccessFactors is utilized continue with [Next Step](#deploy-cap-service-to-cloud-foundry-and-hana-cloud) . If, you don't have a real SAP SuccessFactors then please utilize the mock service provided.
+Please follow below steps to deploy the mock service application.
+#### Deploy mtar file
+1. Download the .mtar file from [Mock Successfactors Mtar file]()
+2. Login to SAP Business Application studio and open an Empty folder.
+![Mock-sfsf](./images/mocksfsf1.png)
+3. Drag and Drop the Downloaded mtar file into the workspace.
+![Mock-sfsf](./images/mocksfsf2.png)
+4. Please get the cloud foundry api endpoint from SAP BTP cockpit.
+![Mock-sfsf](./images/mocksfsf3.png)
+5. Open terminal and login using below command
+        ```cf login -a <API Endpoint>```
+6. Deploy the **mock-successfactors_1.0.0.mtar** file using command
+    ```cf deploy mock-successfactors_1.0.0.mtar```
+7. This should successfully deploy the application.
+8. After deploying a user provided variable is created in SAP BTP cockpit as shown below
+![Mock-sfsf](./images/mocksfsf4.png)
+9. Please Edit the messagingurl according to your need and restart the application.
+#### Creating a destination in SAP BTP cockpit
+1. Login to SAP BTP cockpit and navigate to **connectivity > destination** in the navigation pane.
+![Mock-sfsf](./images/mocksfsf5.png)
+2. Click on New Destination.
+![Mock-sfsf](./images/mocksfsf6.png)
+3. Complete the Destination with below values
 
-| Field | Value         |
-|--------|------------------|
-| Name  | seniority-calc-sfsf-service | 
-| Type  | HTTP  |
-| Description  | Destination to connect to mock service. |
-| URL  | url from Step 6    |
-| Proxy Type  | Internet     |
-| Authentication  | NoAuthentication |
+    | Field | Value         |
+    |--------|------------------|
+    | Name  | seniority-calc-sfsf-service | 
+    | Type  | HTTP  |
+    | Description  | Destination to connect to mock service. |
+    | URL  | url from Step 6    |
+    | Proxy Type  | Internet     |
+    | Authentication  | NoAuthentication |
 
-## Testing the Mock SuccessFactors application along with SAP Appgyver ##
+Now the mock successfactors is successfully setup. Please continue with next step to deploy the senioriy-calculator application.
 
-1. There are 10 mock users that are setup to test the mock scenario. user ids are 
+# Deploy CAP service to Cloud Foundry and HANA Cloud
 
-| userId | userName         |
-|--------|------------------|
-| 00001  | Zimbelman Miller | 
-| 00002  | Youard Mitchell  |
-| 00003  | Youngblood Haugen|
-| 00004  | Zerbe Clarke     |
-| 00005  | Zobel Walker     |
-| 00006  | Zimble Magnusson |
-| 00007  | Zorn Watson      |
-| 00008  | Yerkes Eriksson  |
-| 00009  | Zacherl Jensen   |
-| 00010  | Yandell Hansen   |
+In this how to guide, you will deploy the CAP Application with all its bound services as a Multi Target Application (MTA) from SAP Business Application Studio to Cloud Foundry and HANA Cloud.
 
+1. Logon to the SAP BTP, Cloud Foundry Runtime. 
 
-2. To test the users find the request.http file present at ```https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/sfsf-mobile-appgyver/srv/request.http```
+    - Click on **View > Find Command** in the menu on the top.
+   
+      ![Find Command](./images/bas-0.png)
+    - Search for **Login to Cloud Foundry** and press **Enter** to confirm.
+      ![Login to Cloud Foundry](./images/bas-1.png)
 
-3. there are three requests present as shown in the image below
-![mock-sfsf2](./images/mocksfsf2.png)
-4. change the @mockSfsfBtpEndPoint( application url noted after deploying the application it should be in the format **application url**/odata/v2) and @username (options from step 1).
+    - Copy & Paste the API Endpoint of your subaccount from the SAP BTP Cockpit. 
+      ![Login to Cloud Foundry](./images/bas-2.png)
+ 
+    - Follow the process by entering the credentials of your SAP BTP account and by selecting the Cloud Foundry org and space you want to deploy the application to.
 
-5. Now Send both POST request and PATCH request. this should create a user with exception that is showcased in SAP Appgyver application.
+2. Install dependencies and update npm libraries
 
-6. Now Log into Appgyver application to follow the normal testing. this should update the custom fields in Mock SuccessFactors Application.
+    ```
+    npm install
+    npm update
+    ```
+    
+3. Mock service is used insted of Real SAP Successfactors so please remove the **sap-successfactors-extensibility** service specified in mta.yaml of Application. 
+![Login to Cloud Foundry](./images/mocksfsf7.png)
+![Login to Cloud Foundry](./images/mocksfsf8.png)
 
-7. Lastly to check if the custom fields are updated Send the GET request from request.http file. it should show all the custom fields are updated.
+    Build the Multi-Target Application Archive (MTA Archive) by executing the following command in the root directory of your project in the terminal:
+
+    ```
+    mbt build
+    ```
+
+4. Deploy the application to SAP BTP, Cloud Foundry Runtime by executing the following command in the root directory of your project in the terminal:
+
+    ```
+    cf deploy mta_archives/seniority-calc_1.0.0.mtar
+    ```
+
+    This will trigger the deployment to SAP BTP, Cloud Foundry Runtime including the creation of the necessary service instances and service bindings to the corresponding apps.
+
+## Redeployment
+If you want to redeploy without undeploying the running CAP Application, you need to change a few services in the ```mta.yaml``` from ```managed-service``` to ```existing-service```. For this, adjust the marked lines highlighted [here](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/mta.yaml#L49-L50) and [here](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/mta.yaml#L61-L62) that it looks like the following:
+
+```yaml
+  - name: seniority-calc-em
+    #type: org.cloudfoundry.managed-service
+    type: org.cloudfoundry.existing-service
+    
+    ...
+
+  - name: seniority-calc-sfsf-service
+    #type: org.cloudfoundry.managed-service
+    type: org.cloudfoundry.existing-service
+```

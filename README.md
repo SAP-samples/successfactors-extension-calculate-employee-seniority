@@ -49,7 +49,7 @@ Subscriptions required in your SAP Business Technology Platform Account:
 | SAP Business Application Studio   | standard         |
 | SAP Event Mesh                    | standard         |
 
-## Setup & Configuration
+## Setup & Configuration with real SAP SuccessFactors
 
 ### Step 1: [Setup SAP Business Technology Platform](../mission/01-SetupSAPBusinessTechnologyPlatform)
 ### Step 2: [(Skip for Mock SuccessFactors) Setup SAP BTP and SAP SuccessFactors connectivity and extensibility](../mission/02-SetupSAPBTPAndSAPSuccessFactorsConnectivityAndExtensibility)
@@ -61,6 +61,17 @@ Subscriptions required in your SAP Business Technology Platform Account:
 ### Step 8: [Test End to End from SAP SuccessFactors to CAP Application](../mission/08-TestEndToEndFromSAPSuccessFactorsToCAPApplication)
 ### Step 9: [Run CAP Application in SAP Business Application Studio](../mission/09-RunCAPApplicationInSAPBusinessApplicationStudio)
 ### Step 10: [Customize Seniority Rules to your own requirements](../mission/10-CustomizeSeniorityRulesToYourOwnRequirements)
+
+
+## Setup & Configuration with Mock service
+
+### Step 1: [Setup SAP Business Technology Platform](../mission/01-SetupSAPBusinessTechnologyPlatform)
+### Step 2: [Configure SAP Business Application Studio](../mission/03-ConfigureSAPBusinessApplicationStudio)
+### Step 3: [Clone the GitHub repository and adapt the configuration to your environment](../mission/04-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
+### Step 4: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission/11-MockSfsfDeployment)
+### Step 5: [Test End to End from SAP SuccessFactors to CAP Application](../mission/12-TestEndToEndMockFromCAP)
+### Step 6: [Run CAP Application in SAP Business Application Studio](../mission/09-RunCAPApplicationInSAPBusinessApplicationStudio)
+### Step 7: [Customize Seniority Rules to your own requirements](../mission/10-CustomizeSeniorityRulesToYourOwnRequirements)
 
 ## Requirements
 
