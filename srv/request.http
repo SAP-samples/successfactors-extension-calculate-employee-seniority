@@ -65,7 +65,7 @@ Content-Type: application/json
 
 ##################################### Requests for Mock SuccessFactors service ##################################
 
-@mockSfsfBtpEndPoint = https://ci-sunrise-sunrise-dev-mock-successfactors-srv.cfapps.eu10.hana.ondemand.com/odata/v2
+@mockSfsfBtpEndPoint = https://<application-URL>/odata/v2
 
 ##### other mock users 00001-00010
 @username = 00018
