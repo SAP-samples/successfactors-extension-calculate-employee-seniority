@@ -7,21 +7,23 @@ The same process works for an employee whose employment is terminated, as well a
 ## Hiring a new employee
 
 1. Open the request.http file present in srv folder of Application.  
-![mocksfsf](./images/mocksfsf1.png)
+  ![mocksfsf](./images/mocksfsf1.png)
 
-2. Send Post request After editing the <code>mockSfsfBtpEndpoint</code> and <code>username</code>. 
-  > Note:There are 10 mock users that are already created username ranging from 00001-00010. Feel free to utilize one of those Ids as the data is already setup.
+2. Send Post request after editing the <code>mockSfsfBtpEndpoint</code> and     <code>username</code>. 
+    > **Note:** Ten mock users are created with user IDs ranging from 00001-00010. Feel free to utilize one of those Ids, as the necessary details of users are set up.
 
-  > Note: Status should be "HIRENEW" for new Hires and "REHREH" for Rehire.
+    > **Note:** Status should be "HIRENEW" for new Hires and "REHREH" for Rehire.
 
-Response should be as below:  
-![mocksfsf2](./images/mocksfsf2.png)
+  Response should be as below:  
 
-3. After successfully sending the POST request, seniority calculator application updates the EmpEmployment Entity with seniority details. To check the ouput utilize the GET request as shown below.   
+  ![mocksfsf2](./images/mocksfsf2.png)
 
-![mocksfsf3](./images/mocksfsf3.png)
+3. After successfully sending the POST request, the seniority calculator application updates the EmpEmployment Entity with seniority details. To check the output, utilize the GET request as shown below.       
 
-4. After successfully sending the GET request the response should showcase the updated entity with Seniority calculations as below.    
-  ![mocksfsf3](./images/mocksfsf4.png)
+    ![mocksfsf3](./images/mocksfsf3.png)
 
-If you reached this point then the mock application and seniority calculator application are setup and tested successfully.
+4. The GET request responds with the updated entity, including seniority calculations.    
+
+    ![mocksfsf3](./images/mocksfsf4.png)
+
+If you reach this point, then the mock application and seniority calculator application are set up and tested successfully.

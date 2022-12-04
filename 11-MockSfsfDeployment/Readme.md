@@ -1,26 +1,36 @@
 # Deploy Mock service to Cloud Foundry
-Please skip this step if real SAP SuccessFactors is utilized continue with [Next Step](#deploy-cap-service-to-cloud-foundry-and-hana-cloud) . If, you don't have a real SAP SuccessFactors then  utilize the mock service provided.
-Follow the steps to deploy mock service.
+Please skip this step if real SAP SuccessFactors is utilized and continue with the [Next Step](#deploy-cap-service-to-cloud-foundry-and-hana-cloud). If you don't have a real SAP SuccessFactors, then use the mock service provided. Follow the steps to deploy mock service.
 #### Deploy mtar file
-1. Download the .mtar file from [Mock Successfactors Mtar file]()
-2. Login to SAP Business Application studio and open an Empty folder. 
-    ![Mock-sfsf](./images/mocksfsf1.png)
-3. Drag and Drop the Downloaded mtar file into the workspace.  
-  ![Mock-sfsf](./images/mocksfsf2.png)
-4. Please get the cloud foundry api endpoint from SAP BTP cockpit.  
-  ![Mock-sfsf](./images/mocksfsf3.png)
-5. Open terminal and login using below command
-        ```cf login -a <API Endpoint>```
-6. Deploy the **mock-successfactors_1.0.0.mtar** file using command
-    ```cf deploy mock-successfactors_1.0.0.mtar```
-7. This should successfully deploy the application.
-8. A user provided variable is created in SAP BTP cockpit as shown below after succesfull deployment.  
-![Mock-sfsf](./images/mocksfsf4.png)
-9. Please Edit the messagingurl according to your need and restart the application.
+1. Download the .mtar file from [Mock SuccessFactors Mtar file]()
+2. Login to SAP Business Application studio and open an Empty folder.     
+
+    ![Mock-sfsf](./images/mocksfsf1.png) 
+
+3. Drag and Drop the Downloaded mtar file into the workspace.     
+
+    ![Mock-sfsf](./images/mocksfsf2.png)  
+
+4. Get the cloud foundry API endpoint from SAP BTP cockpit.    
+
+    ![Mock-sfsf](./images/mocksfsf3.png)    
+
+5. Open terminal and login using below command     
+        ```cf login -a <API Endpoint>```    
+
+6. Deploy the **mock-successfactors_1.0.0.mtar** file using command    
+    ```cf deploy mock-successfactors_1.0.0.mtar```    
+
+7. Now the mock service is deployed successfully, note down the Application URL.   
+
+8. A user-provided variable is created in the SAP BTP cockpit, as shown below after successful deployment.    
+
+    ![Mock-sfsf](./images/mocksfsf4.png)   
+
+9. Please Edit the **messagingurl** according to your need and restart the application.
 #### Creating a destination in SAP BTP cockpit
-1. Login to SAP BTP cockpit and navigate to **connectivity > destination** in the navigation pane.  
+1. Login to SAP BTP cockpit and navigate to **Connectivity > Destinations** in the navigation pane.      
   ![Mock-sfsf](./images/mocksfsf5.png)
-2. Click on New Destination.  
+2. Click on New Destination.         
   ![Mock-sfsf](./images/mocksfsf6.png)
 3. Complete the Destination with below values
 
@@ -29,11 +39,11 @@ Follow the steps to deploy mock service.
     | Name  | seniority-calc-sfsf-service | 
     | Type  | HTTP  |
     | Description  | Destination to connect to mock service. |
-    | URL  | url from Step 6    |
+    | URL  | URL from Step 6    |
     | Proxy Type  | Internet     |
     | Authentication  | NoAuthentication |
 
-Now the mock successfactors is successfully setup. Please continue with next step to deploy the senioriy-calculator application.
+Now the  SAP SuccessFactors mock service is successfully set up. Please continue with the following steps to deploy the seniority-calculator application.
 
 # Deploy CAP service to Cloud Foundry and HANA Cloud
 
