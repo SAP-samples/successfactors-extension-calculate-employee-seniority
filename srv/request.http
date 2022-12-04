@@ -21,7 +21,7 @@ Content-Type: application/json
 }
 
 
-### update last date worked and seniority date
+### update last date worked and seniority date (Only needed for Rehire Employee)
 PATCH {{mockSfsfBtpEndPoint}}/EmpEmployment(personIdExternal='{{username}}',userId='{{username}}')
 Content-Type: application/json
 
