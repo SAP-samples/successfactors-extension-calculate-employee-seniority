@@ -1,5 +1,5 @@
 
-GET http://localhost:4004/employee/Employee
+GET http://localhost:4004/employee/EmployeeProfile
 Content-Type: application/json
 
 ##### POST
@@ -15,15 +15,17 @@ Content-Type: application/json
     "status": "HIRENEW",
     "seniority": null
 }
-
+####
+DELETE http://localhost:4004/employee/Employee/cc62894c-58c6-4e11-a77e-2551a0404d29
+Content-Type: application/json
 
 ##### PATCH
 
-PATCH http://localhost:4004/employee/Employee('49ac8ab2-be48-4084-8496-520b2c3e4884')
+PATCH http://localhost:4004/employee/Employee('4c1df7a6-5d78-4597-a7c4-2f0313c10ebb')
 Content-Type: application/json
 
 {
-    "userId": "101052",
+    "userId": "nani1",
     "terminationDate": "2018-09-18T00:00:00.000Z",
     "status": "REHREH"
 }
@@ -59,3 +61,39 @@ Content-Type: application/json
    
 
 ## REHREH HIRENEW TEROTH
+
+
+##################################### Requests for Mock SuccessFactors service ##################################
+
+@mockSfsfBtpEndPoint = https://ci-sunrise-sunrise-dev-mock-successfactors-srv.cfapps.eu10.hana.ondemand.com/odata/v2
+
+##### other mock users 00001-00010
+@username = 00018
+
+##### create a employee with Exception #######
+
+POST {{mockSfsfBtpEndPoint}}/Employee
+Content-Type: application/json
+
+{
+    "userId": "{{username}}",
+    "hireDate": "2015-04-06T00:00:00Z",
+    "terminationDate": null,
+    "originalStartDate": "2015-04-06T00:00:00Z",
+    "status": "HIRENEW"
+}
+
+
+### update last date worked and seniority date
+PATCH {{mockSfsfBtpEndPoint}}/EmpEmployment(personIdExternal='{{username}}',userId='{{username}}')
+Content-Type: application/json
+
+{
+    "lastDateWorked":"2016-10-17T00:00:00.000Z",
+    "seniorityDate":"2021-10-25T00:00:00.000Z"
+}
+
+
+### check if seniorits details has been updated to mock SuccessFactors Service ######
+GET {{mockSfsfBtpEndPoint}}/EmpEmployment(personIdExternal='{{username}}',userId='{{username}}')
+Content-Type: application/json
