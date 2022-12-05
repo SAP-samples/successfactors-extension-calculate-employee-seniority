@@ -10,7 +10,7 @@ The same process works for an employee whose employment is terminated, as well a
   ![mocksfsf](./images/mocksfsf1.png)
 
 2. Send Post request after editing the <code>mockSfsfBtpEndpoint</code> and     <code>username</code>. 
-    > **Note:** mockSfsfBtpEndpoint should look like `https://<api-endpoint>/odata/v2`. `<api-endpoint>` is the application URL of deployed mock service.
+    > **Note:** `mockSfsfBtpEndpoint` should look like `https://<api-endpoint>/odata/v2`. `<api-endpoint>` is the application URL of deployed mock service.
 
     > **Note:** Ten mock users are created with user IDs ranging from 00001-00010. Feel free to utilize one of those Ids, as the necessary details of users are set up.
 
