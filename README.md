@@ -49,7 +49,7 @@ Subscriptions required in your SAP Business Technology Platform Account:
 | SAP Business Application Studio   | standard         |
 | SAP Event Mesh                    | standard         |
 
-## Setup & Configuration with real SAP SuccessFactors
+## Setup & Configuration with SAP SuccessFactors
 
 ### Step 1: [Setup SAP Business Technology Platform](../mission/01-SetupSAPBusinessTechnologyPlatform)
 ### Step 2: [Setup SAP BTP and SAP SuccessFactors connectivity and extensibility](../mission/02-SetupSAPBTPAndSAPSuccessFactorsConnectivityAndExtensibility)

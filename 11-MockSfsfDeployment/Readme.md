@@ -26,7 +26,11 @@ Please skip this step if real SAP SuccessFactors is utilized and continue with t
 
     ![Mock-sfsf](./images/mocksfsf4.png)   
 
-9. Please Edit the **messagingurl** according to your need and restart the application.
+9. Here the namespace of SAP Event Mesh is <code>sap/successfactors/SFPART057671</code>. If the namespace is changed, please get it from SAP Event Mesh Service as shown below.
+
+    ![mock-sfsf9](./images/mocksfsf9.png)
+
+> **Note:** This namespace will only be available after deploying the seniority calculator application.
 #### Creating a destination in SAP BTP cockpit
 1. Login to SAP BTP cockpit and navigate to **Connectivity > Destinations** in the navigation pane.      
   ![Mock-sfsf](./images/mocksfsf5.png)
