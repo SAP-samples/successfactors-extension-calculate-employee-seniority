@@ -46,7 +46,7 @@ resources:
       service: xsuaa
       path: ./xs-security.json
   - name: seniority-calc-em
-    type: org.cloudfoundry.managed-service
+    type: org.cloudfoundry.existing-service
     #type: org.cloudfoundry.existing-service
     parameters:
       path: ./em.json 
