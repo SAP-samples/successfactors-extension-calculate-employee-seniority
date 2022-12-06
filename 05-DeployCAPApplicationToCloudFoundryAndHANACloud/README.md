@@ -22,7 +22,7 @@ In this how to guide, you will deploy the CAP Application with all its bound ser
     npm update
     ```
     
-3. If Mock service is used insted of Real SAP Successfactors Please remove the **sap-successfactors-extensibility** service specified in mta.yaml of Application. 
+3. If Mock service is used insted of SAP SuccessFactors, please remove the **sap-successfactors-extensibility** service specified in mta.yaml of application. 
 ![Login to Cloud Foundry](./images/mocksfsf7.png)
 ![Login to Cloud Foundry](./images/mocksfsf8.png)
 
