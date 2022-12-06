@@ -1,0 +1,36 @@
+
+
+##################################### Requests for Mock SuccessFactors service ##################################
+
+@mockSfsfBtpEndPoint = https://<application-URL>/odata/v2
+
+##### other mock users 00001-00010
+@username = 00018
+
+##### create a employee with Exception #######
+
+POST {{mockSfsfBtpEndPoint}}/Employee
+Content-Type: application/json
+
+{
+    "userId": "{{username}}",
+    "hireDate": "2015-04-06T00:00:00Z",
+    "terminationDate": null,
+    "originalStartDate": "2015-04-06T00:00:00Z",
+    "status": "HIRENEW"
+}
+
+
+### update last date worked and seniority date (Only needed for Rehire Employee)
+PATCH {{mockSfsfBtpEndPoint}}/EmpEmployment(personIdExternal='{{username}}',userId='{{username}}')
+Content-Type: application/json
+
+{
+    "lastDateWorked":"2016-10-17T00:00:00.000Z",
+    "seniorityDate":"2021-10-25T00:00:00.000Z"
+}
+
+
+### check if seniorits details has been updated to mock SuccessFactors Service ######
+GET {{mockSfsfBtpEndPoint}}/EmpEmployment(personIdExternal='{{username}}',userId='{{username}}')
+Content-Type: application/json
