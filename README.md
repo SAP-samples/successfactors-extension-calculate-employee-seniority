@@ -69,7 +69,7 @@ Subscriptions required in your SAP Business Technology Platform Account:
 ### Step 2: [Configure SAP Business Application Studio](../mission/03-ConfigureSAPBusinessApplicationStudio)
 ### Step 3: [Clone the GitHub repository and adapt the configuration to your environment](../mission/04-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
 ### Step 4: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission/11-MockSfsfDeployment)
-### Step 5: [Test End to End from SAP SuccessFactors to CAP Application](../mission/12-TestEndToEndMockFromCAP)
+### Step 5: [Test End to End from Mock Service to CAP Application](../mission/12-TestEndToEndMockFromCAP)
 ### Step 6: [Run CAP Application in SAP Business Application Studio](../mission/09-RunCAPApplicationInSAPBusinessApplicationStudio)
 ### Step 7: [Customize Seniority Rules to your own requirements](../mission/10-CustomizeSeniorityRulesToYourOwnRequirements)
 
