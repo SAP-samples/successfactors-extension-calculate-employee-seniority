@@ -58,7 +58,7 @@ Subscriptions required in your SAP Business Technology Platform Account:
 ### Step 5: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission/05-DeployCAPApplicationToCloudFoundryAndHANACloud)
 ### Step 6: [Configure Events on SAP SuccessFactors](../mission/06-ConfigureEventsOnSAPSuccessFactors)
 ### Step 7: [Configure custom seniority fields in SAP SuccessFactors](../mission/07-ConfigureCustomSeniorityFieldsInSAPSuccessFactors)
-### Step 8: [Test End to End from SAP SuccessFactors to CAP Application](../mission/08-TestEndToEndFromSAPSuccessFactorsToCAPApplication)
+### Step 8: [Test End to End from Mock Service to BTP CAP application](../mission/08-TestEndToEndFromSAPSuccessFactorsToCAPApplication)
 ### Step 9: [Run CAP Application in SAP Business Application Studio](../mission/09-RunCAPApplicationInSAPBusinessApplicationStudio)
 ### Step 10: [Customize Seniority Rules to your own requirements](../mission/10-CustomizeSeniorityRulesToYourOwnRequirements)
 
