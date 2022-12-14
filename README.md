@@ -58,7 +58,7 @@ Subscriptions required in your SAP Business Technology Platform Account:
 ### Step 5: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission/05-DeployCAPApplicationToCloudFoundryAndHANACloud)
 ### Step 6: [Configure Events on SAP SuccessFactors](../mission/06-ConfigureEventsOnSAPSuccessFactors)
 ### Step 7: [Configure custom seniority fields in SAP SuccessFactors](../mission/07-ConfigureCustomSeniorityFieldsInSAPSuccessFactors)
-### Step 8: [Test End to End from Mock Service to BTP CAP application](../mission/08-TestEndToEndFromSAPSuccessFactorsToCAPApplication)
+### Step 8: [Test End to End from SAP SuccessFactors to BTP CAP application](../mission/08-TestEndToEndFromSAPSuccessFactorsToCAPApplication)
 ### Step 9: [Run CAP Application in SAP Business Application Studio](../mission/09-RunCAPApplicationInSAPBusinessApplicationStudio)
 ### Step 10: [Customize Seniority Rules to your own requirements](../mission/10-CustomizeSeniorityRulesToYourOwnRequirements)
 
@@ -69,7 +69,7 @@ Subscriptions required in your SAP Business Technology Platform Account:
 ### Step 2: [Configure SAP Business Application Studio](../mission/03-ConfigureSAPBusinessApplicationStudio)
 ### Step 3: [Clone the GitHub repository and adapt the configuration to your environment](../mission/04-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
 ### Step 4: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission/11-MockSfsfDeployment)
-### Step 5: [Test End to End from SAP SuccessFactors to CAP Application](../mission/12-TestEndToEndMockFromCAP)
+### Step 5: [Test End to End from Mock service to CAP application](../mission/12-TestEndToEndMockFromCAP)
 ### Step 6: [Run CAP Application in SAP Business Application Studio](../mission/09-RunCAPApplicationInSAPBusinessApplicationStudio)
 ### Step 7: [Customize Seniority Rules to your own requirements](../mission/10-CustomizeSeniorityRulesToYourOwnRequirements)
 
