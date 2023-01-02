@@ -169,7 +169,7 @@ module.exports = async (srv) => {
       if (status === "EXCEPTION") {
         return res;
       }
-      let payload = getSeniorityPayload(id, years, months, days, totalDays);
+      let payload = await getSeniorityPayload(id, years, months, days, totalDays);
       console.log("PAYLOAD");
       let response = await sfsfSrv.post("/upsert", payload);
       console.log("Response => ");
@@ -192,7 +192,7 @@ module.exports = async (srv) => {
       if (employee.status === "EXCEPTION") {
         return;
       }
-      let payload = getSeniorityPayload(id, years, months, days, totalDays);
+      let payload = await getSeniorityPayload(id, years, months, days, totalDays);
       let response = await sfsfSrv.post("/upsert", payload);
       console.log(response);
     }
@@ -289,17 +289,30 @@ module.exports = async (srv) => {
     return { years: years, months: months, days: days, totalDays: diffInDays };
   };
 
-  const getSeniorityPayload = (userId, years, months, days, totalDays) => {
-    return {
-      __metadata: {
-        uri: `https://apisalesdemo4.successfactors.com:443/odata/v2/EmpEmployment(personIdExternal='${userId}',userId='${userId}')`,
-        type: "SFOData.EmpEmployment",
-      },
-      customString1: years.toString(),
-      customString2: months.toString(),
-      customString3: days.toString(),
-      customString4: totalDays.toString(),
-    };
+  const getSeniorityPayload = async (userId, years, months, days, totalDays) => {
+    let issfsf = await getdestinationDetails(sfsfSrv.destination);
+    if(issfsf){
+      return {
+        __metadata: {
+          uri: `https://apisalesdemo4.successfactors.com:443/odata/v2/EmpEmployment(personIdExternal='${userId}',userId='${userId}')`,
+          type: "SFOData.EmpEmployment",
+        },
+        customString1: years.toString(),
+        customString2: months.toString(),
+        customString3: days.toString(),
+        customString4: totalDays.toString(),
+      };
+    }
+    else{
+      return {
+        userId:userId,
+        customString1: years.toString(),
+        customString2: months.toString(),
+        customString3: days.toString(),
+        customString4: totalDays.toString(),
+      };
+    }
+    
   };
 
   const calcSeniorityTotalDaysException = async (employee) => {
