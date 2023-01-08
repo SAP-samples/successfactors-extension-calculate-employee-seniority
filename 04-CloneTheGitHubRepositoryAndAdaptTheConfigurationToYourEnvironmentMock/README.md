@@ -43,7 +43,7 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
  
 7.	Open the project by selecting projects -> successfactors-extension-calculate-employee-seniority and click on *Open*
 
-8. The namespace of SAP Event Mesh is **sap/successfactors/SFP*******671**. Namespace can be changed in **em.json**
+8. Here the namespace of SAP Event Mesh is **sap/successfactors/SFP*******671**. Namespace can be changed in **em.json**
 
 _em.json:_
 ```js
@@ -55,7 +55,7 @@ _em.json:_
   ...
 ```
 
-9. Modify the topic name in *srv/emp-service.js* to include the name of the SFSF system registered.
+9. Modify the topic name in *srv/emp-service.js* to include the name of the Mock system.
 
 
 ```js
