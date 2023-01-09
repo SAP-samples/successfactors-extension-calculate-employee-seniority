@@ -2,29 +2,28 @@
 
 You will now enrich the default environment of your SAP Business Application Studio dev space with credentials of deployed services you deployed on Cloud Foundry. Once this step is done, you are able to run the CAP Application locally in your SAP Business Application Studio dev space to implement further logic and to debug.
 
-1. To run the CAP Application locally in your SAP Business Application Studio dev space we need to provide environment variables to our CAP Application. Execute ```$ cf apps``` in the terminal of SAP Business Application studio to get a list of all applications.
-![Open App](./images/bas-0.png)
-2. Copy the name of the CAP Application for the seniority calculator and execute ```$ cf env <NAME-OF-THE-CAP-APPLICATION> > default-env.json```. This will create a file ```default-env.json``` with the following content:
+1. To run the CAP Application locally in your SAP Business Application Studio dev space we need to provide environment variables to our CAP Application. Execute 
+    ```$ cds bind -2 seniority-calc-db,seniority-calc-uaa,seniority-calc-em,seniority-calc-dest,eniority-calc-sfsf-service ``` 
+in the terminal of SAP Business Application studio.
+![Open App](./images/bas-new-1.png)
 
-![Open App](./images/bas-1.png)
 
-3. Now format the file ```default-env.json``` to a valid JSON file which follows this structure:
 
-```json
-{
-    "VCAP_SERVICES": {
-        "...": "..."
-    },
-    "VCAP_APPLICATION": {
-        "...": "..."
-    }
-}
-```
+    > NOTE: The captured image showcases the command for running a mock service locally, so seniority-calc-sfsf-service is not specified. Add it to the command if a real SAP SuccessFactors system is used.
+2. If there is an error as below
 
-4. Run the application locally in your SAP Business Application Studio environment by executing the following command in the root directory of your project in the terminal:
+    ![Open App](./images/bas-new-3.png)
+
+    Please navigate to instances and subscriptions in SAP BTP cockpit and create keys for all the dependent services as shown below
+
+    ![Open App](./images/bas-new-2.png)
+
+    for example: if you need to create key for seniority-calc-db service, name it seniority-calc-db-key (append -key to the name of service)
+
+3. Run the application locally in your SAP Business Application Studio environment by executing the following command in the root directory of your project in the terminal:
 
     ```
-    cds watch
+    cds watch --profile hybrid
     ```
 
     Click on `Expose and Open` in the appearing PopUp. 
