@@ -43,13 +43,13 @@ In this how to guide, you will clone an existing CAP application to your SAP Bus
  
 7.	Open the project by selecting projects -> successfactors-extension-calculate-employee-seniority and click on *Open*
 
-8. Here the namespace of SAP Event Mesh is **sap/successfactors/SFP*******671**. Namespace can be changed in **em.json**
+8. Namespace of the Messaging client can be changed in **em.json**.
 
 _em.json:_
 ```js
 {
   "emname": "seniority_calculator",
-  "namespace": "sap/successfactors/<NAME-OF-MOCK-SYSTEM>",
+  "namespace": "sap/successfactors/<NAME-OF-MESSAGING-CLIENT>",
   "options": {
     "management": true,
   ...
@@ -60,10 +60,12 @@ _em.json:_
 
 ```js
 messaging.on(
-    "sap/successfactors/SFPART057671/isc/contractchange",
+    "sap/successfactors/<NAME-OF-MESSAGING-CLIENT>/isc/contractchange",
     ...
 )
 ```
+
+> NOTE: Please note that changing the namespace is not mandatory (steps 8 and 9). But if you wish to do so please change according to steps 8 and 9. Please remember to update the messaging client in mock service as well (as shown in line [Mock service User provided varible change](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/mission/11-MockSfsfDeployment/Readme.md#L78))
 
 10. Change the [redirect URL](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/xs-security.json#L9) in *xs-security.json*, based on your BAS URL.
 
