@@ -48,12 +48,6 @@ If you want to redeploy without undeploying the running CAP Application, you nee
   - name: seniority-calc-em
     #type: org.cloudfoundry.managed-service
     type: org.cloudfoundry.existing-service
-    
-    ...
-
-  - name: seniority-calc-sfsf-service
-    #type: org.cloudfoundry.managed-service
-    type: org.cloudfoundry.existing-service
 ```
 
 
@@ -81,7 +75,7 @@ Please skip this step if real SAP SuccessFactors is utilized and continue with t
 
 7. Now the mock service is deployed successfully, note down the Application URL.   
 
-8. A user-provided variable is created in the SAP BTP cockpit, as shown below after successful deployment.    
+8. A user-provided variable(messaging client URL) is created in the SAP BTP cockpit, as shown below after successful deployment. If the namespace in **em.json** of the Seniority calculator application is updated, please change it here and restart the service.
 
     ![Mock-sfsf](./images/mocksfsf4.png)   
 
@@ -89,7 +83,7 @@ Please skip this step if real SAP SuccessFactors is utilized and continue with t
 
     ![mock-sfsf9](./images/mocksfsf9.png)
 
-> **Note:** This namespace will only be available after deploying the seniority calculator application.
+> **Note:** This namespace will only be available after deploying the seniority calculator application. It can also be fetched from **em.json** of the seniority calculator application.
 #### Creating a destination in SAP BTP cockpit
 1. Login to SAP BTP cockpit and navigate to **Connectivity > Destinations** in the navigation pane.      
   ![Mock-sfsf](./images/mocksfsf5.png)

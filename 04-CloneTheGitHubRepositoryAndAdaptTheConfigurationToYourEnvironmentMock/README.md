@@ -65,7 +65,7 @@ messaging.on(
 )
 ```
 
-> NOTE: Please note that changing the namespace is not mandatory (steps 8 and 9). But if you wish to do so please change according to steps 8 and 9. Please remember to update the messaging client in mock service as well (as shown in line [Mock service User provided varible change](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/mission/11-MockSfsfDeployment/Readme.md#L78))
+> NOTE: Changing the namespace is optional (steps 8 and 9). But if you wish to do so, please remember to update the messaging client in the mock service as well (as shown in the section [Deploy mock mtar file](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/mission/11-MockSfsfDeployment/Readme.md#deploy-mtar-file) Step 8)
 
 10. Change the [redirect URL](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/blob/main/xs-security.json#L9) in *xs-security.json*, based on your BAS URL.
 
