@@ -2,9 +2,9 @@
 
 You will now enrich the default environment of your SAP Business Application Studio dev space with credentials of deployed services you deployed on Cloud Foundry. Once this step is done, you are able to run the CAP Application locally in your SAP Business Application Studio dev space to implement further logic and to debug.
 
-1. To run the CAP Application locally in your SAP Business Application Studio dev space we need to provide environment variables to our CAP Application. Execute 
+1. To run the CAP Application locally in your SAP Business Application Studio dev space, we need to provide environment variables to our CAP Application. Execute the command
     ```$ cds bind -2 seniority-calc-db,seniority-calc-uaa,seniority-calc-em,seniority-calc-dest,eniority-calc-sfsf-service ``` 
-in the terminal of SAP Business Application studio.
+in the root directory of your project in the terminal of SAP Business Application studio.
 ![Open App](./images/bas-new-1.png)
 
 
@@ -14,11 +14,11 @@ in the terminal of SAP Business Application studio.
 
     ![Open App](./images/bas-new-3.png)
 
-    Please navigate to instances and subscriptions in SAP BTP cockpit and create keys for all the dependent services as shown below
+    Please navigate to instances and subscriptions in SAP BTP cockpit and create keys for all the dependent services, as shown below
 
     ![Open App](./images/bas-new-2.png)
 
-    for example: if you need to create key for seniority-calc-db service, name it seniority-calc-db-key (append -key to the name of service)
+    for example: if you need to create a service key for the seniority-calc-db service, name it seniority-calc-db-key (append -key to the name of service)
 
 3. Run the application locally in your SAP Business Application Studio environment by executing the following command in the root directory of your project in the terminal:
 
