@@ -16,7 +16,7 @@ This automatic calculation frees up HR specialists from having to maintain eligi
 
 **How You Get There - What is the solution?**
 Calculate Employee Seniority uses SAP SuccessFactors Intelligent Service Center, together with the SAP BTP, to adjust the employee's seniority date based upon events and calculations, and store the history.
-This application provides HR with custom functionality to calculate seniority dates without manual intervention. The Calculate Employee Seniority Rules are integrated with an SAP Extension suite extension for historical data to access an employee's history for specific calculations.
+This application provides HR with custom functionality to calculate seniority dates without manual intervention. The Calculate Employee Seniority rules are integrated with an extension for historical data to access an employee's history for specific calculations.
 
 ### Solution Diagram
 
