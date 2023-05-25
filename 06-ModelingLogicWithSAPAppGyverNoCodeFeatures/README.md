@@ -1,4 +1,4 @@
-## Model logic with SAP AppGyver no-code features
+## Model logic with SAP Build Apps no-code features
 
 In this section you will connect navigation between the 2 pages so that the selected Employee ID is passed to the detail page. You will also configure the on click events for the buttons on the detail page.
 

@@ -1,8 +1,8 @@
-## End to end test from SAP AppGyver to SAP SuccessFactors
+## End to end test from SAP Build Apps to SAP SuccessFactors
 
 In this step, we will execute a rehire in SAP SuccessFactors using the sample BestRun company data. The business event will be sent to SAP BTP, and marked as an exception when the previous termination date is not available in the SAP HANA Cloud persistence.
 
-The HR business partner will see the exception surfaced in the SAP AppGyver application, remediate it with info from Employee Central, and the updated record is ultimately written back, with the seniority custom fields fully populated.
+The HR business partner will see the exception surfaced in the SAP Build Apps application, remediate it with info from Employee Central, and the updated record is ultimately written back, with the seniority custom fields fully populated.
 
 > **Note:** If a real SAP SuccessFactors system is used, then continue with Step [Rehire employee in SAP SuccessFactors](#rehire-employee-in-sap-successfactors). If a mock service is used, then  follow Step [Rehire employee in Mock service](#rehire-employee-in-mock-service)
 
@@ -18,7 +18,7 @@ The following section shows you how to interactively rehire an employee so that 
 3. Please send both POST request and PATCH request by changing the necessary values.
 >**Note:** Status should be "REHREH" in the POST request.
 
-This should create and employee with status "EXCEPTION" that will be updated in SAP Appgyver UI. Skip to step [Check the Event Message in SAP BTP Cockpit](#check-the-event-message-in-sap-btp-cockpit)
+This should create and employee with status "EXCEPTION" that will be updated in SAP Build Apps UI. Skip to step [Check the Event Message in SAP BTP Cockpit](#check-the-event-message-in-sap-btp-cockpit)
 
 ### Rehire employee in SAP SuccessFactors
 
@@ -77,11 +77,11 @@ If you cloned the GitHub repo as-is, you should now have a console log message i
 
 1. This is also where you would see any exception that might have occurred
 
-### Finish the testing in SAP AppGyver
+### Finish the testing in SAP Build Apps
 
-Now that the exception record has been created, we can remediate it in SAP AppGyver
+Now that the exception record has been created, we can remediate it in SAP Build Apps
 
-1. Launch your SAP AppGyver application in the preview portal or from its deployed location
+1. Launch your SAP Build Apps application in the preview portal or from its deployed location
 1. Confirm that there are employee records showing up under the exceptions page and select your rehired employee
 
     ![Populated exceptions](./images/12popexception.png)

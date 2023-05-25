@@ -11,7 +11,7 @@ The following services endpoints should be available upon deployment of the CAP 
 
   ![CAP Service endpoints](./images/1endpoints.png)
     
-1. Employee - This is the locally managed entity on SAP BTP that the original extension writes to, and that we will use to make updates via SAP AppGyver. An event handler for ```srv.after("UPDATE")``` has been added to recalculate seniority and write it back to Employee Central
+1. Employee - This is the locally managed entity on SAP BTP that the original extension writes to, and that we will use to make updates via SAP Build. An event handler for ```srv.after("UPDATE")``` has been added to recalculate seniority and write it back to Employee Central
 2. Photo - Remote entity on SAP SuccessFactors; basic service implementation to apply photoType filter and OData v2
 3. User - Remote entity on SAP SuccessFactors; no service implementation for this entity
 4. EmpEmployment - Remote entity on SAP SuccessFactors; basic service implementation for OData v2
@@ -42,7 +42,7 @@ Metadata for the Employee entity has been updated as follows:
 </EntityType>
 ```
 
-Note that at the time of writing, SAP AppGyver OData understands Edm.DateTimeOffset (e.g. CAP type Timestamp) but not Edm.Date (e.g. CAP type Date). ID was also changed to Edm.String from Edm.UUID
+Note that at the time of writing, SAP Build OData understands Edm.DateTimeOffset (e.g. CAP type Timestamp) but not Edm.Date (e.g. CAP type Date). ID was also changed to Edm.String from Edm.UUID
 
 Metadata for the EmployeeProfile (previously called ProfileMixin) entity as follows:
 
@@ -64,4 +64,4 @@ Metadata for the EmployeeProfile (previously called ProfileMixin) entity as foll
 </EntityType>
 ```
 
-Note that the type for photo is Edm.Binary, which is passed through from the underlying SAP SuccessFactors data type. Some character conversion of the binary string occurs at the CAP service level, and we account for this in an SAP AppGyver formula. Further explanation of the newly added code is covered in the [final section of the mission](../08-CustomizeTheApplicationAndServicesForYourOwnScenario).
+Note that the type for photo is Edm.Binary, which is passed through from the underlying SAP SuccessFactors data type. Some character conversion of the binary string occurs at the CAP service level, and we account for this in an SAP Build formula. Further explanation of the newly added code is covered in the [final section of the mission](../08-CustomizeTheApplicationAndServicesForYourOwnScenario).

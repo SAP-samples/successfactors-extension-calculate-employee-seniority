@@ -1,10 +1,10 @@
 ## Create an SAP AppGyver project on SAP BTP
 
-In the following steps you will create an app formatted for an iOS form factor. This will not replace the great tutorials on [SAP AppGyver Academy](https://docs.appgyver.com/appgyver-academy) but will highlight the design and technical concepts needed to implement an app that uses SAP BTP and SAP SuccessFactors in seamless fashion.
+In the following steps you will create an app formatted for an iOS form factor. This will highlight the design and technical concepts needed to implement an app that uses SAP BTP and SAP SuccessFactors in seamless fashion.
 
-Start by accessing SAP AppGyver in the BTP cockpit:
+Start by accessing SAP Build Apps in the BTP cockpit:
 
-  ![Access SAP AppGyver](./images/0AccessSAPAppGyverFromBTP.png)
+  ![Access SAP Build Apps](./images/0AccessSAPAppGyverFromBTP.png)
 
 ### Page 1 - Exception List
 
@@ -111,5 +111,5 @@ The second page will contain the details for a specific employee. Some data will
 
         ![Exception details complete](./images/2.7FinishExceptionDetails.png)
 
-Congratulations! You have now completed the design of your AppGyver mobile application.
+Congratulations! You have now completed the design of your SAP Build Apps mobile application.
 

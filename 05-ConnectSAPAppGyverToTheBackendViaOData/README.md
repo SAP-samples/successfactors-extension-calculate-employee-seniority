@@ -1,4 +1,4 @@
-## Connect SAP AppGyver to the backend via OData
+## Connect SAP Build Apps to the backend via OData
 
 In this section, we'll hook up the application to the CAP OData endpoints you deployed in the previous sections. This will allow us to preview the app with real data from SAP BTP and SAP SuccessFactors. We will do this by mapping in the OData service and any entities we want to access. Then, we populate the data into the app components through the use of data variables.
 
