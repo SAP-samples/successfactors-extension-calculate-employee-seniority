@@ -15,7 +15,7 @@ The application notifies staff about key updates using notifications and leverag
 
 ### Solution Diagram
 
-![solution diagram](images/Create%20a%20custom%20mobile%20app%20to%20extend%20HR%20capabilities%20-%20Solution%20Diagram.png)
+![solution diagram](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/assets/6976027/195da5f8-7ce9-4238-b53f-7e1a6261db4d)
 
 The Calculate Employee Seniority extension is developed using the SAP Cloud Application programming Model (CAP) and runs on the SAP BTP, Cloud Foundry runtime. It consumes platform services like SAP Event Mesh, SAP HANA Cloud and the Destination service. The events occuring in SAP SuccessFactors are inserted into the SAP Event Mesh queue. The application running in Cloud Foundry is notified on events, consumes them from the queue and inserts the event data into the HANA Cloud database, applies rules for seniority calculation and finally updates those results to custom fields on SAP SuccessFactors.
 
@@ -53,7 +53,7 @@ Subscriptions required in your SAP Business Technology Platform Account:
 
 ### Pre-requisites: [Configure the Calculate Employee Seniority use case](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/tree/mission)
 
-### Step 1: [Set up Build Apps on SAP BTP using a booster](../mission-sfsf-mobile-appgyver/01-SetupSAPBusinessTechnologyPlatform)
+### Step 1: [Set up SAP Build Apps on SAP BTP using a booster](../mission-sfsf-mobile-appgyver/01-SetupSAPBusinessTechnologyPlatform)
 ### Step 2: [Clone the GitHub repository and adapt the configuration to your environment](../mission-sfsf-mobile-appgyver/02-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
 ### Step 3: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission-sfsf-mobile-appgyver/03-DeployCAPApplicationToCloudFoundryAndHANACloud)
 ### Step 4: [Create an SAP Build Apps project ](../mission-sfsf-mobile-appgyver/04-CreateSAPAppGyverProject)
