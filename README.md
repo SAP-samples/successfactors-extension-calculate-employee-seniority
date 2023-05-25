@@ -19,7 +19,7 @@ The application notifies staff about key updates using notifications and leverag
 
 The Calculate Employee Seniority extension is developed using the SAP Cloud Application programming Model (CAP) and runs on the SAP BTP, Cloud Foundry runtime. It consumes platform services like SAP Event Mesh, SAP HANA Cloud and the Destination service. The events occuring in SAP SuccessFactors are inserted into the SAP Event Mesh queue. The application running in Cloud Foundry is notified on events, consumes them from the queue and inserts the event data into the HANA Cloud database, applies rules for seniority calculation and finally updates those results to custom fields on SAP SuccessFactors.
 
-In this addition to the use case, SAP Build is added to quickly created a native mobile application for exception handling. There are enhancements to the CAP service, incorporating remote SAP SuccessFactors services, and the ability to handle CORS communication between SAP Build and SAP SuccessFactors OData services. This has the increased benefit of proxying specific entities from the SFSF backend on-demand, reducing data duplication of sensitive HR information. 
+In this addition to the use case, SAP Build Apps is added to quickly created a native mobile application for exception handling. There are enhancements to the CAP service, incorporating remote SAP SuccessFactors services, and the ability to handle CORS communication between SAP Build Apps and SAP SuccessFactors OData services. This has the increased benefit of proxying specific entities from the SFSF backend on-demand, reducing data duplication of sensitive HR information. 
 
 ## Prerequisites
 The required systems and components are:
@@ -46,21 +46,21 @@ Subscriptions required in your SAP Business Technology Platform Account:
 | --------------------------------- | ---------------- |
 | SAP Business Application Studio   | standard         |
 | SAP Event Mesh                    | standard         |
-| SAP Build                      | standard         |
+| SAP Build Apps                    | standard         |
 
 
 ## Setup & Configuration
 
 ### Pre-requisites: [Configure the Calculate Employee Seniority use case](https://github.com/SAP-samples/successfactors-extension-calculate-employee-seniority/tree/mission)
 
-### Step 1: [Set up Build on SAP BTP using a booster](../mission-sfsf-mobile-Build/01-SetupSAPBusinessTechnologyPlatform)
-### Step 2: [Clone the GitHub repository and adapt the configuration to your environment](../mission-sfsf-mobile-Build/02-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
-### Step 3: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission-sfsf-mobile-Build/03-DeployCAPApplicationToCloudFoundryAndHANACloud)
-### Step 4: [Create an SAP Build project ](../mission-sfsf-mobile-Build/04-CreateSAPBuildProject)
-### Step 5: [Connect SAP Build to the backend via OData](../mission-sfsf-mobile-Build/05-ConnectSAPBuildToTheBackendViaOData)
-### Step 6: [Modeling logic with SAP Build no-code features ](../mission-sfsf-mobile-Build/06-ModelingLogicWithSAPBuildNoCodeFeatures)
-### Step 7: [Test end to end from SAP Build to SAP SuccessFactors](../mission-sfsf-mobile-Build/07-TestEndToEndFromSAPBuildToSAPSuccessFactors)
-### Step 8: [Customize the application and services for your own scenario](../mission-sfsf-mobile-Build/08-CustomizeTheApplicationAndServicesForYourOwnScenario)
+### Step 1: [Set up Build Apps on SAP BTP using a booster](../mission-sfsf-mobile-appgyver/01-SetupSAPBusinessTechnologyPlatform)
+### Step 2: [Clone the GitHub repository and adapt the configuration to your environment](../mission-sfsf-mobile-appgyver/02-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
+### Step 3: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission-sfsf-mobile-appgyver/03-DeployCAPApplicationToCloudFoundryAndHANACloud)
+### Step 4: [Create an SAP Build Apps project ](../mission-sfsf-mobile-appgyver/04-CreateSAPAppGyverProject)
+### Step 5: [Connect SAP Build Apps to the backend via OData](../mission-sfsf-mobile-appgyver/05-ConnectSAPAppGyverToTheBackendViaOData)
+### Step 6: [Modeling logic with SAP Build Apps no-code features ](../mission-sfsf-mobile-appgyver/06-ModelingLogicWithSAPAppGyverNoCodeFeatures)
+### Step 7: [Test end to end from SAP Build Apps to SAP SuccessFactors](../mission-sfsf-mobile-appgyver/07-TestEndToEndFromSAPAppGyverToSAPSuccessFactors)
+### Step 8: [Customize the application and services for your own scenario](../mission-sfsf-mobile-appgyver/08-CustomizeTheApplicationAndServicesForYourOwnScenario)
 
 
 ## Requirements
