@@ -1,4 +1,4 @@
-## Create an SAP AppGyver project on SAP BTP
+## Create an SAP Build Apps project on SAP BTP
 
 In the following steps you will create an app formatted for an iOS form factor. This will highlight the design and technical concepts needed to implement an app that uses SAP BTP and SAP SuccessFactors in seamless fashion.
 
