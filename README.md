@@ -56,10 +56,10 @@ Subscriptions required in your SAP Business Technology Platform Account:
 ### Step 1: [Set up SAP Build Apps on SAP BTP using a booster](../mission-sfsf-mobile-appgyver/01-SetupSAPBusinessTechnologyPlatform)
 ### Step 2: [Clone the GitHub repository and adapt the configuration to your environment](../mission-sfsf-mobile-appgyver/02-CloneTheGitHubRepositoryAndAdaptTheConfigurationToYourEnvironment)
 ### Step 3: [Deploy CAP Application to Cloud Foundry and HANA Cloud](../mission-sfsf-mobile-appgyver/03-DeployCAPApplicationToCloudFoundryAndHANACloud)
-### Step 4: [Create an SAP Build Apps project ](../mission-sfsf-mobile-appgyver/04-CreateSAPAppGyverProject)
-### Step 5: [Connect SAP Build Apps to the backend via OData](../mission-sfsf-mobile-appgyver/05-ConnectSAPAppGyverToTheBackendViaOData)
-### Step 6: [Modeling logic with SAP Build Apps no-code features ](../mission-sfsf-mobile-appgyver/06-ModelingLogicWithSAPAppGyverNoCodeFeatures)
-### Step 7: [Test end to end from SAP Build Apps to SAP SuccessFactors](../mission-sfsf-mobile-appgyver/07-TestEndToEndFromSAPAppGyverToSAPSuccessFactors)
+### Step 4: [Create an SAP Build Apps project ](../mission-sfsf-mobile-appgyver/04-CreateSAPBuildAppsProject)
+### Step 5: [Connect SAP Build Apps to the backend via OData](../mission-sfsf-mobile-appgyver/05-ConnectSAPBuildAppsToTheBackendViaOData)
+### Step 6: [Modeling logic with SAP Build Apps no-code features ](../mission-sfsf-mobile-appgyver/06-ModelingLogicWithSAPBuildAppsNoCodeFeatures)
+### Step 7: [Test end to end from SAP Build Apps to SAP SuccessFactors](../mission-sfsf-mobile-appgyver/07-TestEndToEndFromSAPBuildAppsToSAPSuccessFactors)
 ### Step 8: [Customize the application and services for your own scenario](../mission-sfsf-mobile-appgyver/08-CustomizeTheApplicationAndServicesForYourOwnScenario)
 
 

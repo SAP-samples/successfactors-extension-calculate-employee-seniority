@@ -4,7 +4,7 @@ In the following steps you will create an app formatted for an iOS form factor. 
 
 Start by accessing SAP Build Apps in the BTP cockpit:
 
-  ![Access SAP Build Apps](./images/0AccessSAPAppGyverFromBTP.png)
+  ![Access SAP Build Apps](./images/0AccessSAPBuildAppsFromBTP.png)
 
 ### Page 1 - Exception List
 
